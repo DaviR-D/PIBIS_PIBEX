@@ -1,6 +1,7 @@
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
-from Controllers import templates
+from Controllers import templates, builder
 
-win = templates.Template1()
+win = builder.Builder1()
+win.window.show()

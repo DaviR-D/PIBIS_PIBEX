@@ -2,7 +2,7 @@
 <!-- Generated with glade 3.38.2 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
-  <object class="GtkWindow">
+  <object class="GtkWindow" id="1">
     <property name="can-focus">False</property>
     <child>
       <!-- n-columns=3 n-rows=8 -->
@@ -111,6 +111,7 @@
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
+            <signal name="clicked" handler="salvar" swapped="no"/>
           </object>
           <packing>
             <property name="left-attach">1</property>
