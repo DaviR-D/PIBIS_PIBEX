@@ -11,6 +11,9 @@ class Template1(Gtk.Window):
 		self.window.connect("delete-event", Gtk.main_quit)
 		builder.connect_signals(self)
 
+	def onButtonClicked(self, widget):
+		print('teste')
+
 class Template2(Gtk.Window):
 	def __init__(self):
 		builder = Gtk.Builder()

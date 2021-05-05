@@ -1,12 +1,12 @@
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
-from Templates import builder, controller
+from Controllers import builder, controller
 
 class Main(Gtk.Window):
 	def __init__(self):
 		builder = Gtk.Builder()
-		builder.add_from_file('Templates/UI/main.glade')
+		builder.add_from_file('UI/main.glade')
 		self.window = builder.get_object('mainWindow')
 		self.newButton = builder.get_object('new')
 		self.loadButton = builder.get_object('load')
@@ -15,6 +15,9 @@ class Main(Gtk.Window):
 		self.defaultButton = builder.get_object('default')
 		self.window.connect("delete-event", Gtk.main_quit)
 		builder.connect_signals(self)
+
+	def onDefaultClicked(self, widget):
+		controller.win.window.show()
 
 
 win = Main()
