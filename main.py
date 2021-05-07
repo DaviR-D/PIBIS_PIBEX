@@ -1,7 +1,7 @@
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
-from Controllers import builder, controller
+from Controllers import templateController, builderController
 
 class Main(Gtk.Window):
 	def __init__(self):
@@ -16,8 +16,11 @@ class Main(Gtk.Window):
 		self.window.connect("delete-event", Gtk.main_quit)
 		builder.connect_signals(self)
 
-	def onDefaultClicked(self, widget):
+	def defaultBuild(self, widget):
 		controller.win.window.show()
+
+	def newBuild(self, widget):
+		builderController.Build([1, 2])
 
 
 win = Main()

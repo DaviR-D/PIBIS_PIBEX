@@ -14,7 +14,7 @@ class Builder1(Gtk.Window):
 		self.op4 = builder.get_object('op4')
 		self.alternativaCorreta = builder.get_object('correta')
 		self.seletorImagem = builder.get_object('seletorImagem')
-		self.build = {'imagem':'', 'op1':'', 'op2':'', 'op3':'', 'op4':'', 'correta':''}
+		self.build = dict()
 		self.window.connect("delete-event", Gtk.main_quit)
 		builder.connect_signals(self)
 
@@ -27,3 +27,4 @@ class Builder1(Gtk.Window):
 		self.build['correta'] = self.alternativaCorreta.get_text()
 		with open("Custom/default.config", 'w') as config:
 			json.dump(self.build, config)
+		self.window.destroy()
