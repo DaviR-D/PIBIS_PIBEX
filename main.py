@@ -20,7 +20,18 @@ class Main(Gtk.Window):
 		controller.win.window.show()
 
 	def newBuild(self, widget):
-		builderController.Build([1, 2])
+		builder = Gtk.Builder()
+		builder.add_from_file('UI/main.glade')
+		self.newWindow = builder.get_object('newWindow')
+		self.createButton = builder.get_object('createButton')
+		self.templateEntry = builder.get_object('templateEntry')
+		builder.connect_signals(self)
+		self.newWindow.show()
+
+	def createButtonClicked(self, widget):
+		builderController.Build(self.templateEntry.get_text())
+		self.newWindow.destroy()
+
 
 
 win = Main()
