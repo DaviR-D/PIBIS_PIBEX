@@ -17,7 +17,7 @@ class Main(Gtk.Window):
 		builder.connect_signals(self)
 
 	def defaultBuild(self, widget):
-		controller.win.window.show()
+		templateController.load('Custom/default.config')
 
 	def newBuild(self, widget):
 		builder = Gtk.Builder()
@@ -31,6 +31,7 @@ class Main(Gtk.Window):
 	def createButtonClicked(self, widget):
 		builderController.Build(self.templateEntry.get_text())
 		self.newWindow.destroy()
+
 
 
 
