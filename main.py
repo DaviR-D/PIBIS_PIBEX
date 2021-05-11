@@ -3,7 +3,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 from Controllers import templateController, builderController
 
-class Main(Gtk.Window):
+class Main(Gtk.Window): # Carrega elementos UI
 	def __init__(self):
 		builder = Gtk.Builder()
 		builder.add_from_file('UI/main.glade')
@@ -19,7 +19,7 @@ class Main(Gtk.Window):
 	def defaultBuild(self, widget):
 		templateController.load('Custom/default.config')
 
-	def newBuild(self, widget):
+	def newBuild(self, widget): # Carrega e apresenta a janela de seleção de templates para a nova configuração
 		builder = Gtk.Builder()
 		builder.add_from_file('UI/main.glade')
 		self.newWindow = builder.get_object('newWindow')
@@ -28,7 +28,7 @@ class Main(Gtk.Window):
 		builder.connect_signals(self)
 		self.newWindow.show()
 
-	def createButtonClicked(self, widget):
+	def createButtonClicked(self, widget): # Passa a lista de templates selecionados para o builderController
 		builderController.Build(self.templateEntry.get_text())
 		self.newWindow.destroy()
 
