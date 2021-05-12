@@ -2,6 +2,7 @@
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
+from Controllers import templateController
 
 class Template1(Gtk.Window):
 	def __init__(self):
@@ -14,6 +15,7 @@ class Template1(Gtk.Window):
 			self.options[x - 1].id = x
 		self.image = builder.get_object('image')
 		self.resposta = ''
+		self.next = []
 		builder.connect_signals(self)
 
 	def onButtonClicked(self, widget): # Checa se o botão pressionado corresponde à resposta configurada como correta
@@ -21,6 +23,9 @@ class Template1(Gtk.Window):
 			print("Correta")
 		else:
 			print("Errada")
+		if(len(self.next[0]) > self.next[1]):
+			templateController.load(self.next[0], self.next[1])
+		self.window.destroy()
 
 class Template2(Gtk.Window):
 	def __init__(self):
