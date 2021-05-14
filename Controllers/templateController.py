@@ -14,3 +14,20 @@ def load(config, index): # Carrega uma janela vazia do template e a configura de
         win.resposta = config[index]['correta']
         win.next = [config, index + 1]
         win.window.show()
+
+    if(config[index]['template'] == '2'):
+        win = templates.Template2()
+        pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['imagem'], width=500, height=300, preserve_aspect_ratio=False)
+        win.image.set_from_pixbuf(pixbuf)
+        win.text.set_label(config[index]['texto'])
+        win.next = [config, index + 1]
+        win.window.show()
+
+    if(config[index]['template'] == '3'):
+        win = templates.Template3()
+        for x in range(1, 9):
+            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['img' + str(x)], width=100, height=100, preserve_aspect_ratio=False)
+            win.images[x - 1].set_from_pixbuf(pixbuf)
+            win.texts[x - 1].set_label(config[index]['text' + str(x)])
+        win.next = [config, index + 1]
+        win.window.show()

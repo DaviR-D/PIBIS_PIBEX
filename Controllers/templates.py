@@ -30,7 +30,33 @@ class Template1(Gtk.Window):
 class Template2(Gtk.Window):
 	def __init__(self):
 		builder = Gtk.Builder()
-		builder.add_from_file('templates.glade')
+		builder.add_from_file('UI/templates.glade')
 		self.window = builder.get_object('2')
-		self.window.connect("delete-event", Gtk.main_quit)
+		self.image = builder.get_object('image2')
+		self.text = builder.get_object('text')
+		self.next = []
 		builder.connect_signals(self)
+
+	def	onButtonClicked(self, widget):
+			if(len(self.next[0]) > self.next[1]):
+				templateController.load(self.next[0], self.next[1])
+			self.window.destroy()
+
+class Template3(Gtk.Window):
+	def __init__(self):
+		builder = Gtk.Builder()
+		builder.add_from_file('UI/templates.glade')
+		self.window = builder.get_object('3')
+		self.images = []
+		self.texts = []
+		for x in range(1,9):
+			self.images.append(builder.get_object('img' + str(x)))
+		for x in range(1, 9):
+			self.texts.append(builder.get_object('text' + str(x)))
+		self.next = []
+		builder.connect_signals(self)
+
+	def onButtonClicked(self, widget):
+		if(len(self.next[0]) > self.next[1]):
+			templateController.load(self.next[0], self.next[1])
+		self.window.destroy()
