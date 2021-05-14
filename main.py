@@ -31,8 +31,8 @@ class Main(Gtk.Window): # Carrega elementos UI
 		builder.connect_signals(self)
 		self.newWindow.show()
 
-	def createButtonClicked(self, widget): # Passa a lista de templates selecionados para o builderController
-		builderController.Build(self.templateEntry.get_text().split(), 0, [])
+	def createButtonClicked(self, widget): # Passa a lista de templates selecionados e o arquivo para o builderController
+		builderController.Build(self.templateEntry.get_text().split(), 0, [], 'Custom/default.config')
 		self.newWindow.destroy()
 
 
