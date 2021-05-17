@@ -22,7 +22,7 @@ def load(config, index): # Carrega uma janela vazia do template e a configura de
     elif(config[index]['template'] == '3'):
         win = templates.Template3()
         for x in range(1, 9):
-            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['img' + str(x)], width=100, height=100, preserve_aspect_ratio=False)
+            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['img' + str(x)], width=200, height=150, preserve_aspect_ratio=False)
             win.images[x - 1].set_from_pixbuf(pixbuf)
             win.texts[x - 1].set_label(config[index]['text' + str(x)])
 

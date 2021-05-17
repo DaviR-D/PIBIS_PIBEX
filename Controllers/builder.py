@@ -17,7 +17,7 @@ class Builder(Gtk.Window):
 			builderController.Build(*self.next, self.file, self.fileName)
 
 		else:
-			with open(self.fileName, 'w') as config:
+			with open(self.fileName, 'w+') as config:
 				json.dump(self.file, config)
 
 

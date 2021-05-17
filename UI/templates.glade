@@ -4,6 +4,7 @@
   <requires lib="gtk+" version="3.24"/>
   <object class="GtkWindow" id="1">
     <property name="can-focus">False</property>
+    <property name="window-position">center</property>
     <property name="default-width">500</property>
     <property name="default-height">500</property>
     <child>
@@ -108,6 +109,7 @@
   </object>
   <object class="GtkWindow" id="2">
     <property name="can-focus">False</property>
+    <property name="window-position">center</property>
     <property name="default-width">500</property>
     <property name="default-height">500</property>
     <child>
@@ -187,6 +189,7 @@
   </object>
   <object class="GtkWindow" id="3">
     <property name="can-focus">False</property>
+    <property name="window-position">center</property>
     <child>
       <!-- n-columns=2 n-rows=10 -->
       <object class="GtkGrid">
@@ -194,7 +197,7 @@
         <property name="height-request">500</property>
         <property name="visible">True</property>
         <property name="can-focus">False</property>
-        <property name="row-spacing">10</property>
+        <property name="row-spacing">5</property>
         <property name="column-homogeneous">True</property>
         <child>
           <object class="GtkImage" id="img2">
@@ -222,7 +225,11 @@
           <object class="GtkLabel" id="text1">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold 14"/>
+            </attributes>
           </object>
           <packing>
             <property name="left-attach">0</property>
@@ -233,7 +240,11 @@
           <object class="GtkLabel" id="text2">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold 14"/>
+            </attributes>
           </object>
           <packing>
             <property name="left-attach">1</property>
@@ -266,7 +277,11 @@
           <object class="GtkLabel" id="text4">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold 14"/>
+            </attributes>
           </object>
           <packing>
             <property name="left-attach">1</property>
@@ -277,7 +292,11 @@
           <object class="GtkLabel" id="text3">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold 14"/>
+            </attributes>
           </object>
           <packing>
             <property name="left-attach">0</property>
@@ -288,7 +307,11 @@
           <object class="GtkLabel" id="text5">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold 14"/>
+            </attributes>
           </object>
           <packing>
             <property name="left-attach">0</property>
@@ -299,7 +322,11 @@
           <object class="GtkLabel" id="text6">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold 14"/>
+            </attributes>
           </object>
           <packing>
             <property name="left-attach">1</property>
@@ -332,7 +359,11 @@
           <object class="GtkLabel" id="text7">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold 14"/>
+            </attributes>
           </object>
           <packing>
             <property name="left-attach">0</property>
@@ -354,7 +385,11 @@
           <object class="GtkLabel" id="text8">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold 14"/>
+            </attributes>
           </object>
           <packing>
             <property name="left-attach">1</property>

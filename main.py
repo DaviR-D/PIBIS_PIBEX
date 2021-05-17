@@ -28,12 +28,18 @@ class Main(Gtk.Window): # Carrega elementos UI
 		self.newWindow = builder.get_object('newWindow')
 		self.createButton = builder.get_object('createButton')
 		self.templateEntry = builder.get_object('templateEntry')
+		self.nameChooser = builder.get_object('nameChooser')
 		builder.connect_signals(self)
 		self.newWindow.show()
 
 	def createButtonClicked(self, widget): # Passa a lista de templates selecionados e o arquivo para o builderController
-		builderController.Build(self.templateEntry.get_text().split(), 0, [], 'Custom/default.config')
+		builderController.Build(self.templateEntry.get_text().split(), 0, [], 'Custom/' + self.nameChooser.get_text() + '.config')
 		self.newWindow.destroy()
+
+	def load(self, wiget):
+		with open (self.loadButton.get_filename()) as conf:
+			build = json.load(conf)
+		templateController.load(build, 0)
 
 
 
