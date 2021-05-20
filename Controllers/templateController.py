@@ -11,7 +11,7 @@ def load(config, index): # Carrega uma janela vazia do template e a configura de
             win.options[x - 1].set_label(config[index]['op' + str(x)])
         pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['imagem'], width=500, height=300, preserve_aspect_ratio=False)
         win.image.set_from_pixbuf(pixbuf)
-        win.resposta = config[index]['correta']
+        win.respostaCorreta = config[index]['correta']
 
     elif(config[index]['template'] == '2'):
         win = templates.Template2()

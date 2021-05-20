@@ -20,6 +20,8 @@ class Builder(Gtk.Window):
 			with open(self.fileName, 'w+') as config:
 				json.dump(self.file, config)
 
+		self.window.destroy()
+
 
 class Builder1(Builder):
 	def __init__(self):
@@ -41,7 +43,6 @@ class Builder1(Builder):
 			self.file[-1]['op' + str(x)] = self.options[x - 1].get_text()
 		self.file[-1]['correta'] = self.alternativaCorreta.get_text()
 		self.Next()
-		self.window.destroy()
 
 class Builder2(Builder):
 	def __init__(self):
@@ -59,7 +60,6 @@ class Builder2(Builder):
 		self.file[-1]['texto'] = self.text.get_text()
 		self.file[-1]['template'] = '2'
 		self.Next()
-		self.window.destroy()
 
 class Builder3(Builder):
 	def __init__(self):
@@ -81,4 +81,3 @@ class Builder3(Builder):
 			self.file[-1]['text' + str(x)] = self.textInputs[x - 1].get_text()
 		self.file[-1]['template'] = '3'
 		self.Next()
-		self.window.destroy()
