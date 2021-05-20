@@ -475,14 +475,45 @@
   </object>
   <object class="GtkWindow" id="finalWindow">
     <property name="can-focus">False</property>
+    <property name="type">popup</property>
+    <property name="window-position">center</property>
+    <property name="default-width">450</property>
+    <property name="default-height">330</property>
     <child>
-      <object class="GtkLabel" id="finalText">
+      <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
-        <property name="label" translatable="yes">label</property>
-        <attributes>
-          <attribute name="font-desc" value="Sans Bold 20"/>
-        </attributes>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkLabel" id="finalText">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">label</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold 20"/>
+              <attribute name="foreground" value="#1a1a5f5fb4b4"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton">
+            <property name="label" translatable="yes">Ok</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="leave" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
       </object>
     </child>
   </object>

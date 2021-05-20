@@ -40,7 +40,7 @@ class Main(Gtk.Window): # Carrega elementos UI
 	def load(self, wiget):
 		with open (self.loadButton.get_filename()) as conf:
 			build = json.load(conf)
-		templateController.load(build, 0)
+		templateController.load(build)
 
 
 

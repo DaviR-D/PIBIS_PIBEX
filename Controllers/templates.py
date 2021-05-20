@@ -10,11 +10,24 @@ class Template(Gtk.Window):
 		self.builder = Gtk.Builder()
 		self.builder.add_from_file('UI/templates.glade')
 		self.next = []
+		self.Score = [0, 0, 0]
 
 	def Next(self, widget): # Chama o próximo template da lista
 		self.window.destroy()
 		if(len(self.next[0]) > self.next[1]):
-			templateController.load(*self.next)
+			templateController.load(*self.next, self.Score)
+		elif(self.Score[0]):
+			self.finalWindow = self.builder.get_object('finalWindow')
+			self.finalText = self.builder.get_object('finalText')
+			self.finalText.set_label('Você acertou ' + str(self.Score[1]) + ' de ' + str(self.Score[0]) + ' questões\n' 'Pontuação:' + str(self.Score[2]))
+			self.Score[0] = 0
+			self.finalWindow.show()
+
+	def leave(self, widget):
+		self.finalWindow.destroy()
+
+	def onButtonClicked():
+		pass
 
 
 class TemplateQuestion(Template):
@@ -42,10 +55,15 @@ class TemplateQuestion(Template):
 			sleep(0.1)
 		self.erradaWindow.destroy()
 
-	def Check(self, widget): # Checa se o botão pressionado corresponde à resposta configurada como correta
+	def Check(self, widget): # Checa se a resposta recebida corresponde à resposta configurada como correta
+		self.Score[0] += 1
+
 		if(self.resposta == self.respostaCorreta):
+			self.Score[2] += 10
+			self.Score[1] += 1
 			self.Correta()
 		else:
+			self.Score[2] -= 5
 			self.Errada()
 
 		self.Next(widget)
