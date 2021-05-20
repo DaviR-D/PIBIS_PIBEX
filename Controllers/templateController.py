@@ -4,7 +4,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GdkPixbuf, Gio
 from Controllers import templates
 
-def load(config, index=0, score=[0, 0, 0]): # Carrega uma janela vazia do template e a configura de acordo com a configuração recebida
+def load(config, index=0, questionCount=0, rightAnswer=0, score=0): # Carrega uma janela vazia do template e a configura de acordo com a configuração recebida
     if (config[index]['template'] == '1'):
         win = templates.Template1()
         for x in range(1, 5):
@@ -26,6 +26,9 @@ def load(config, index=0, score=[0, 0, 0]): # Carrega uma janela vazia do templa
             win.images[x - 1].set_from_pixbuf(pixbuf)
             win.texts[x - 1].set_label(config[index]['text' + str(x)])
 
+    win.questionCount = questionCount
+    win.rightAnswer = rightAnswer
     win.Score = score
-    win.next = [config, index + 1]
+    win.config = config
+    win.index = index + 1
     win.window.show()

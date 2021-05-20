@@ -9,22 +9,28 @@ class Template(Gtk.Window):
 	def __init__(self):
 		self.builder = Gtk.Builder()
 		self.builder.add_from_file('UI/templates.glade')
-		self.next = []
-		self.Score = [0, 0, 0]
+		self.config = []
+		self.index = []
 
 	def Next(self, widget): # Chama o próximo template da lista
 		self.window.destroy()
-		if(len(self.next[0]) > self.next[1]):
-			templateController.load(*self.next, self.Score)
-		elif(self.Score[0]):
-			self.finalWindow = self.builder.get_object('finalWindow')
-			self.finalText = self.builder.get_object('finalText')
-			self.finalText.set_label('Você acertou ' + str(self.Score[1]) + ' de ' + str(self.Score[0]) + ' questões\n' 'Pontuação:' + str(self.Score[2]))
-			self.Score[0] = 0
-			self.finalWindow.show()
+		if(len(self.config) > self.index):
+			templateController.load(self.config, self.index, self.questionCount, self.rightAnswer, self.Score)
+		elif(self.questionCount):
+			self.final()
+
+	def final(self):
+		self.finalText.set_label(
+		'Você acertou '
+		+ str(self.rightAnswer)
+		+ ' de ' + str(self.questionCount)
+		+ ' questões\n' 'Pontuação:'
+		+ str(self.Score))
+		self.finalWindow.show()
 
 	def leave(self, widget):
 		self.finalWindow.destroy()
+		del self
 
 	def onButtonClicked():
 		pass
@@ -33,40 +39,37 @@ class Template(Gtk.Window):
 class TemplateQuestion(Template):
 	def __init__(self):
 		Template.__init__(self)
+		self.finalWindow = self.builder.get_object('finalWindow')
+		self.finalText = self.builder.get_object('finalText')
 		self.respostaCorreta = ''
 		self.resposta = ''
-
-	def Correta(self):
-		self.corretaWindow = self.builder.get_object('corretaWindow')
-		self.corretaWindow.show()
-		for x in range(15):
-			while Gtk.events_pending():
-				Gtk.main_iteration()
-			sleep(0.1)
-		self.corretaWindow.destroy()
-
-
-	def Errada(self):
-		self.erradaWindow = self.builder.get_object('erradaWindow')
-		self.erradaWindow.show()
-		for x in range(15):
-			while Gtk.events_pending():
-				Gtk.main_iteration()
-			sleep(0.1)
-		self.erradaWindow.destroy()
+		self.questionCount = 0
+		self.rightAnswer = 0
+		self.Score = 0
 
 	def Check(self, widget): # Checa se a resposta recebida corresponde à resposta configurada como correta
-		self.Score[0] += 1
+		self.questionCount += 1
 
 		if(self.resposta == self.respostaCorreta):
-			self.Score[2] += 10
-			self.Score[1] += 1
-			self.Correta()
+			self.Score += 10
+			self.rightAnswer += 1
+			self.resultWindow = self.builder.get_object('corretaWindow')
+			
 		else:
-			self.Score[2] -= 5
-			self.Errada()
+			self.Score -= 5
+			self.resultWindow = self.builder.get_object('erradaWindow')
 
+		self.window.hide()
+		self.result()
 		self.Next(widget)
+
+	def result(self):
+		self.resultWindow.show()
+		for x in range(15):
+			while Gtk.events_pending():
+				Gtk.main_iteration()
+			sleep(0.1)
+		self.resultWindow.destroy()
 
 
 class Template1(TemplateQuestion):

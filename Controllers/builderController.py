@@ -3,7 +3,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 from Controllers import builder
 
-def Build(templates, index, file, fileName): # Carrega uma janela de criação de configuração para cada template da lista
+def Build(templates, fileName, file=[], index=0): # Carrega uma janela de criação de configuração para cada template da lista
     if (int(templates[index]) == 1):
         Builder = builder.Builder1()
 
@@ -13,7 +13,8 @@ def Build(templates, index, file, fileName): # Carrega uma janela de criação d
     elif (int(templates[index]) == 3):
         Builder = builder.Builder3()
 
-    Builder.next = [templates, index + 1]
+    Builder.templateList = templates
+    Builder.index = index + 1
     Builder.file = file
     Builder.fileName = fileName
     Builder.window.show()

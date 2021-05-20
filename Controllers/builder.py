@@ -10,11 +10,12 @@ class Builder(Gtk.Window):
 		self.builder.add_from_file('UI/builder.glade')
 		self.file = [] # Armazena os dicionários contendo a configuração que será salva
 		self.fileName = ''
-		self.next = [[], int()] # Armazena a lista de tempaltes a serem construídos e o index
+		self.index = 0
+		self.templateList = []
 
 	def Next(self): # Chama o contrutor do próximo template da lista e salva caso for o último
-		if(self.next[1] < len(self.next[0])):
-			builderController.Build(*self.next, self.file, self.fileName)
+		if(self.index < len(self.templateList)):
+			builderController.Build(self.templateList, self.fileName, self.file, self.index)
 
 		else:
 			with open(self.fileName, 'w+') as config:
