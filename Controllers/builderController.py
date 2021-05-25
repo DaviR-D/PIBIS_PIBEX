@@ -13,6 +13,9 @@ def Build(templates, fileName, file=[], index=0): # Carrega uma janela de criaç
     elif (int(templates[index]) == 3):
         Builder = builder.Builder3()
 
+    elif (int(templates[index]) == 4):
+        Builder = builder.Builder4()
+
     Builder.templateList = templates
     Builder.index = index + 1
     Builder.file = file

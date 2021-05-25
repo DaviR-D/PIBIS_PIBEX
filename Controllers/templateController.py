@@ -26,6 +26,15 @@ def load(config, index=0, questionCount=0, rightAnswer=0, score=0): # Carrega um
             win.images[x - 1].set_from_pixbuf(pixbuf)
             win.texts[x - 1].set_label(config[index]['text' + str(x)])
 
+    elif(config[index]['template'] == '4'):
+        win = templates.Template4()
+        for x in range(1, 5):
+            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['img' + str(x)], width=100, height=100, preserve_aspect_ratio=False)
+            win.images[x - 1].set_from_pixbuf(pixbuf)
+            win.texts[x - 1].set_label(config[index]['text' + str(x)])
+        win.respostaCorreta = list()
+        win.respostaCorreta = config[index]['resposta'].split()
+
     win.questionCount = questionCount
     win.rightAnswer = rightAnswer
     win.Score = score

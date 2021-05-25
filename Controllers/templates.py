@@ -9,8 +9,8 @@ class Template(Gtk.Window):
 	def __init__(self):
 		self.builder = Gtk.Builder()
 		self.builder.add_from_file('UI/templates.glade')
-		self.config = []
-		self.index = []
+		self.config = list()
+		self.index = list()
 
 	def Next(self, widget): # Chama o próximo template da lista
 		self.window.destroy()
@@ -41,8 +41,8 @@ class TemplateQuestion(Template):
 		Template.__init__(self)
 		self.finalWindow = self.builder.get_object('finalWindow')
 		self.finalText = self.builder.get_object('finalText')
-		self.respostaCorreta = ''
-		self.resposta = ''
+		self.respostaCorreta = str()
+		self.resposta = str()
 		self.questionCount = 0
 		self.rightAnswer = 0
 		self.Score = 0
@@ -54,7 +54,7 @@ class TemplateQuestion(Template):
 			self.Score += 10
 			self.rightAnswer += 1
 			self.resultWindow = self.builder.get_object('corretaWindow')
-			
+
 		else:
 			self.Score -= 5
 			self.resultWindow = self.builder.get_object('erradaWindow')
@@ -76,7 +76,7 @@ class Template1(TemplateQuestion):
 	def __init__(self):
 		TemplateQuestion.__init__(self)
 		self.window = self.builder.get_object('1')
-		self.options = []
+		self.options = list()
 		for x in range(1,5):
 			self.options.append(self.builder.get_object('op' + str(x)))
 			self.options[x - 1].id = x
@@ -102,10 +102,30 @@ class Template3(Template):
 	def __init__(self):
 		Template.__init__(self)
 		self.window = self.builder.get_object('3')
-		self.images = []
-		self.texts = []
+		self.images = list()
+		self.texts = list()
 		for x in range(1,9):
 			self.images.append(self.builder.get_object('img' + str(x)))
 		for x in range(1, 9):
 			self.texts.append(self.builder.get_object('text' + str(x)))
 		self.builder.connect_signals(self)
+
+class Template4(TemplateQuestion):
+	def __init__(self):
+		TemplateQuestion.__init__(self)
+		self.window = self.builder.get_object('4')
+		self.images = list()
+		self.texts = list()
+		self.inputs = list()
+		for x in range(1,5):
+			self.images.append(self.builder.get_object('4img' + str(x)))
+			self.texts.append(self.builder.get_object('4text' + str(x)))
+			self.inputs.append(self.builder.get_object('4input' + str(x)))
+
+		self.builder.connect_signals(self)
+
+	def onButtonClicked(self, widget):
+		self.resposta = list()
+		for input in self.inputs:
+			self.resposta.append(input.get_text())
+		self.Check(widget)
