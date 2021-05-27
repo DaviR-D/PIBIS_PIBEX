@@ -87,7 +87,6 @@ class Builder4(Builder):
 		self.seletoresImagem = list()
 		self.textInputs = list()
 		self.button = self.builder.get_object('saveButton3')
-		self.respostaInput = self.builder.get_object('4resposta')
 		for x in range(1,5):
 			self.seletoresImagem.append(self.builder.get_object('4img' + str(x)))
 			self.textInputs.append(self.builder.get_object('4input' + str(x)))
@@ -99,6 +98,5 @@ class Builder4(Builder):
 		for x in range(1, 5):
 			self.file[-1]['img' + str(x)] = self.seletoresImagem[x - 1].get_filename()
 			self.file[-1]['text' + str(x)] = self.textInputs[x - 1].get_text()
-		self.file[-1]['resposta'] = self.respostaInput.get_text()
 		self.file[-1]['template'] = '4'
 		self.Next()

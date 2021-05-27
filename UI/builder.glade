@@ -497,7 +497,7 @@
     <property name="can-focus">False</property>
     <property name="window-position">center</property>
     <child>
-      <!-- n-columns=2 n-rows=8 -->
+      <!-- n-columns=2 n-rows=6 -->
       <object class="GtkGrid">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
@@ -599,27 +599,9 @@
           </object>
           <packing>
             <property name="left-attach">0</property>
-            <property name="top-attach">7</property>
-            <property name="width">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkEntry" id="4resposta">
-            <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="text" translatable="yes">Sequência correta</property>
-          </object>
-          <packing>
-            <property name="left-attach">0</property>
             <property name="top-attach">5</property>
             <property name="width">2</property>
           </packing>
-        </child>
-        <child>
-          <placeholder/>
-        </child>
-        <child>
-          <placeholder/>
         </child>
         <child>
           <placeholder/>

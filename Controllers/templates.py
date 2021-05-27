@@ -127,5 +127,5 @@ class Template4(TemplateQuestion):
 	def onButtonClicked(self, widget):
 		self.resposta = list()
 		for input in self.inputs:
-			self.resposta.append(input.get_text())
+			self.resposta.append(int(input.get_text()))
 		self.Check(widget)
