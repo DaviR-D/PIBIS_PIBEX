@@ -16,7 +16,7 @@
         <property name="margin-bottom">5</property>
         <property name="row-spacing">5</property>
         <child>
-          <object class="GtkFileChooserButton" id="seletorImagem">
+          <object class="GtkFileChooserButton" id="1seletorImagem1">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="margin-bottom">10</property>
@@ -39,7 +39,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="op2">
+          <object class="GtkEntry" id="1input2">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="text" translatable="yes">2</property>
@@ -50,7 +50,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="op1">
+          <object class="GtkEntry" id="1input1">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="text" translatable="yes">1</property>
@@ -61,7 +61,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="op3">
+          <object class="GtkEntry" id="1input3">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="text" translatable="yes">3</property>
@@ -72,7 +72,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="op4">
+          <object class="GtkEntry" id="1input4">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="text" translatable="yes">4</property>
@@ -94,7 +94,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="correta">
+          <object class="GtkEntry" id="1inputCorreta">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="margin-top">5</property>
@@ -107,7 +107,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="saveButton">
+          <object class="GtkButton" id="saveButton1">
             <property name="label" translatable="yes">Salvar</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
@@ -181,7 +181,7 @@
         <property name="margin-bottom">5</property>
         <property name="row-spacing">5</property>
         <child>
-          <object class="GtkFileChooserButton" id="seletorImagem1">
+          <object class="GtkFileChooserButton" id="2seletorImagem1">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="margin-bottom">10</property>
@@ -204,7 +204,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="saveButton1">
+          <object class="GtkButton" id="saveButton2">
             <property name="label" translatable="yes">Salvar</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
@@ -217,7 +217,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="text">
+          <object class="GtkEntry" id="2input1">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="text" translatable="yes">texto</property>
@@ -303,7 +303,7 @@
         <property name="row-homogeneous">True</property>
         <property name="column-homogeneous">True</property>
         <child>
-          <object class="GtkFileChooserButton" id="seletorImagem2">
+          <object class="GtkFileChooserButton" id="3seletorImagem1">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -314,7 +314,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="seletorImagem3">
+          <object class="GtkFileChooserButton" id="3seletorImagem2">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -325,7 +325,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="seletorImagem4">
+          <object class="GtkFileChooserButton" id="3seletorImagem3">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -336,7 +336,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="seletorImagem5">
+          <object class="GtkFileChooserButton" id="3seletorImagem4">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -347,7 +347,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="seletorImagem6">
+          <object class="GtkFileChooserButton" id="3seletorImagem5">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -358,7 +358,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="seletorImagem7">
+          <object class="GtkFileChooserButton" id="3seletorImagem6">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -369,7 +369,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="seletorImagem8">
+          <object class="GtkFileChooserButton" id="3seletorImagem7">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -380,7 +380,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="seletorImagem9">
+          <object class="GtkFileChooserButton" id="3seletorImagem8">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -391,7 +391,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="textInput1">
+          <object class="GtkEntry" id="3input1">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
           </object>
@@ -401,7 +401,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="textInput2">
+          <object class="GtkEntry" id="3input2">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
           </object>
@@ -411,7 +411,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="textInput3">
+          <object class="GtkEntry" id="3input3">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
           </object>
@@ -421,7 +421,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="textInput4">
+          <object class="GtkEntry" id="3input4">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
           </object>
@@ -431,7 +431,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="textInput5">
+          <object class="GtkEntry" id="3input5">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
           </object>
@@ -441,7 +441,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="textInput6">
+          <object class="GtkEntry" id="3input6">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
           </object>
@@ -451,7 +451,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="textInput7">
+          <object class="GtkEntry" id="3input7">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
           </object>
@@ -461,7 +461,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="textInput8">
+          <object class="GtkEntry" id="3input8">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
           </object>
@@ -471,7 +471,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="saveButton2">
+          <object class="GtkButton" id="saveButton3">
             <property name="label" translatable="yes">Salvar</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
@@ -506,7 +506,7 @@
         <property name="row-homogeneous">True</property>
         <property name="column-homogeneous">True</property>
         <child>
-          <object class="GtkFileChooserButton" id="4img1">
+          <object class="GtkFileChooserButton" id="4seletorImagem1">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -517,7 +517,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="4img2">
+          <object class="GtkFileChooserButton" id="4seletorImagem2">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -528,7 +528,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="4img3">
+          <object class="GtkFileChooserButton" id="4seletorImagem3">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -539,7 +539,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="4img4">
+          <object class="GtkFileChooserButton" id="4seletorImagem4">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -590,7 +590,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="saveButton3">
+          <object class="GtkButton" id="saveButton4">
             <property name="label" translatable="yes">Salvar</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
@@ -637,7 +637,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="5img1">
+          <object class="GtkFileChooserButton" id="5seletorImagem1">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -649,7 +649,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="5img2">
+          <object class="GtkFileChooserButton" id="5seletorImagem2">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -661,7 +661,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="5img3">
+          <object class="GtkFileChooserButton" id="5seletorImagem3">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -673,7 +673,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="5img4">
+          <object class="GtkFileChooserButton" id="5seletorImagem4">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -685,7 +685,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFileChooserButton" id="5img5">
+          <object class="GtkFileChooserButton" id="5seletorImagem5">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -697,7 +697,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="5correta">
+          <object class="GtkEntry" id="5inputCorreta">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="text" translatable="yes">Alternativa Correta</property>
@@ -712,7 +712,7 @@
           <placeholder/>
         </child>
         <child>
-          <object class="GtkButton" id="saveButton4">
+          <object class="GtkButton" id="saveButton5">
             <property name="label" translatable="yes">Salvar</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
@@ -742,7 +742,7 @@
         <property name="orientation">vertical</property>
         <property name="spacing">10</property>
         <child>
-          <object class="GtkFileChooserButton" id="6img1">
+          <object class="GtkFileChooserButton" id="6seletorImagem1">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="title" translatable="yes"/>
@@ -754,7 +754,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="6input1">
+          <object class="GtkEntry" id="6inputCorreta">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
           </object>
@@ -768,7 +768,7 @@
           <placeholder/>
         </child>
         <child>
-          <object class="GtkButton" id="saveButton5">
+          <object class="GtkButton" id="saveButton6">
             <property name="label" translatable="yes">Salvar</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>

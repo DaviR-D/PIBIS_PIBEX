@@ -19,7 +19,7 @@ class Template(Gtk.Window):
 		elif(self.questionCount):
 			self.final()
 
-	def final(self):
+	def final(self): # Carrega a janela final
 		self.finalText.set_label(
 		'Você acertou '
 		+ str(self.rightAnswer)
@@ -78,9 +78,9 @@ class Template1(TemplateQuestion):
 		self.window = self.builder.get_object('1')
 		self.options = list()
 		for x in range(1,5):
-			self.options.append(self.builder.get_object('op' + str(x)))
+			self.options.append(self.builder.get_object('1option' + str(x)))
 			self.options[x - 1].id = x
-		self.image = self.builder.get_object('image')
+		self.image = self.builder.get_object('1image1')
 		self.builder.connect_signals(self)
 
 	def onButtonClicked(self, widget):
@@ -93,8 +93,8 @@ class Template2(Template):
 	def __init__(self):
 		Template.__init__(self)
 		self.window = self.builder.get_object('2')
-		self.image = self.builder.get_object('image2')
-		self.text = self.builder.get_object('text')
+		self.image = self.builder.get_object('2image1')
+		self.text = self.builder.get_object('2text1')
 		self.builder.connect_signals(self)
 
 
@@ -105,9 +105,9 @@ class Template3(Template):
 		self.images = list()
 		self.texts = list()
 		for x in range(1,9):
-			self.images.append(self.builder.get_object('img' + str(x)))
+			self.images.append(self.builder.get_object('3image' + str(x)))
 		for x in range(1, 9):
-			self.texts.append(self.builder.get_object('text' + str(x)))
+			self.texts.append(self.builder.get_object('3text' + str(x)))
 		self.builder.connect_signals(self)
 
 class Template4(TemplateQuestion):
@@ -118,7 +118,7 @@ class Template4(TemplateQuestion):
 		self.texts = list()
 		self.inputs = list()
 		for x in range(1,5):
-			self.images.append(self.builder.get_object('4img' + str(x)))
+			self.images.append(self.builder.get_object('4image' + str(x)))
 			self.texts.append(self.builder.get_object('4text' + str(x)))
 			self.inputs.append(self.builder.get_object('4input' + str(x)))
 
@@ -140,7 +140,7 @@ class Template5(TemplateQuestion):
 		self.text = self.builder.get_object('5text1')
 		for x in range(1,6):
 			self.images.append(self.builder.get_object('5image' + str(x)))
-			self.options.append(self.builder.get_object('5op' + str(x)))
+			self.options.append(self.builder.get_object('5option' + str(x)))
 			self.options[x - 1].id = x
 
 
@@ -155,8 +155,7 @@ class Template6(TemplateQuestion):
 		TemplateQuestion.__init__(self)
 		self.window = self.builder.get_object('6')
 		self.image = self.builder.get_object('6image1')
-		self.input = self.builder.get_object('6resposta')
-
+		self.input = self.builder.get_object('6input1')
 		self.builder.connect_signals(self)
 
 	def onButtonClicked(self, widget):
