@@ -129,3 +129,36 @@ class Template4(TemplateQuestion):
 		for input in self.inputs:
 			self.resposta.append(int(input.get_text()))
 		self.Check(widget)
+
+
+class Template5(TemplateQuestion):
+	def __init__(self):
+		TemplateQuestion.__init__(self)
+		self.window = self.builder.get_object('5')
+		self.images = list()
+		self.options = list()
+		self.text = self.builder.get_object('5text1')
+		for x in range(1,6):
+			self.images.append(self.builder.get_object('5image' + str(x)))
+			self.options.append(self.builder.get_object('5op' + str(x)))
+			self.options[x - 1].id = x
+
+
+		self.builder.connect_signals(self)
+
+	def onButtonClicked(self, widget):
+		self.resposta = str(widget.id)
+		self.Check(widget)
+
+class Template6(TemplateQuestion):
+	def __init__(self):
+		TemplateQuestion.__init__(self)
+		self.window = self.builder.get_object('6')
+		self.image = self.builder.get_object('6image1')
+		self.input = self.builder.get_object('6resposta')
+
+		self.builder.connect_signals(self)
+
+	def onButtonClicked(self, widget):
+		self.resposta = self.input.get_text()
+		self.Check(widget)

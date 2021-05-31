@@ -100,3 +100,41 @@ class Builder4(Builder):
 			self.file[-1]['text' + str(x)] = self.textInputs[x - 1].get_text()
 		self.file[-1]['template'] = '4'
 		self.Next()
+
+class Builder5(Builder):
+	def __init__(self):
+		Builder.__init__(self)
+		self.window = self.builder.get_object('5')
+		self.seletoresImagem = list()
+		self.textInput = self.builder.get_object('5input1')
+		self.button = self.builder.get_object('saveButton4')
+		self.alternativaCorreta = self.builder.get_object('5correta')
+		for x in range(1,6):
+			self.seletoresImagem.append(self.builder.get_object('5img' + str(x)))
+
+		self.builder.connect_signals(self)
+
+	def salvar(self, widget):
+		self.file.append(dict())
+		for x in range(1, 6):
+			self.file[-1]['img' + str(x)] = self.seletoresImagem[x - 1].get_filename()
+		self.file[-1]['text'] = self.textInput.get_text()
+		self.file[-1]['correta'] = self.alternativaCorreta.get_text()
+		self.file[-1]['template'] = '5'
+		self.Next()
+
+class Builder6(Builder):
+	def __init__(self):
+		Builder.__init__(self)
+		self.window = self.builder.get_object('6')
+		self.seletorImagem = self.builder.get_object('6img1')
+		self.button = self.builder.get_object('saveButton5')
+		self.respostaCorreta = self.builder.get_object('6input1')
+		self.builder.connect_signals(self)
+
+	def salvar(self, widget):
+		self.file.append(dict())
+		self.file[-1]['img'] = self.seletorImagem.get_filename()
+		self.file[-1]['correta'] = self.respostaCorreta.get_text()
+		self.file[-1]['template'] = '6'
+		self.Next()
