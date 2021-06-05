@@ -97,11 +97,16 @@
       <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
+        <property name="margin-start">15</property>
+        <property name="margin-end">15</property>
         <property name="orientation">vertical</property>
+        <property name="spacing">30</property>
         <child>
           <object class="GtkScrolledWindow">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
+            <property name="margin-top">10</property>
+            <property name="margin-bottom">10</property>
             <property name="vscrollbar-policy">never</property>
             <child>
               <object class="GtkViewport">
@@ -295,11 +300,7 @@
           <object class="GtkEntry" id="templateEntry">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
-            <property name="margin-start">50</property>
-            <property name="margin-end">50</property>
-            <property name="margin-top">10</property>
-            <property name="margin-bottom">30</property>
-            <property name="text" translatable="yes">Templates usados</property>
+            <property name="placeholder-text" translatable="yes">Templates usados</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -311,16 +312,48 @@
           <object class="GtkEntry" id="nameChooser">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
-            <property name="margin-start">50</property>
-            <property name="margin-end">50</property>
-            <property name="margin-top">10</property>
-            <property name="margin-bottom">30</property>
-            <property name="text" translatable="yes">Nome</property>
+            <property name="placeholder-text" translatable="yes">Nome</property>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBoxText" id="categoria">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="tooltip-text" translatable="yes">Categoria</property>
+            <items>
+              <item id="colors" translatable="yes">Cores</item>
+              <item id="animals" translatable="yes">Animais</item>
+              <item id="vehicles" translatable="yes">Veículos</item>
+              <item id="numbers" translatable="yes">Números</item>
+              <item id="others" translatable="yes">Outros</item>
+            </items>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBoxText" id="dificuldade">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="tooltip-text" translatable="yes">Dificuldade</property>
+            <items>
+              <item id="easy" translatable="yes">Fácil</item>
+              <item id="normal" translatable="yes">Normal</item>
+              <item id="hard" translatable="yes">Difícil</item>
+            </items>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">4</property>
           </packing>
         </child>
         <child>
@@ -337,7 +370,7 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">3</property>
+            <property name="position">5</property>
           </packing>
         </child>
       </object>

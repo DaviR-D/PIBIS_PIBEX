@@ -5,7 +5,7 @@ from gi.repository import Gtk, GdkPixbuf, Gio
 from Controllers import templates
 import random
 
-def load(config, index=0, questionCount=0, rightAnswer=0, score=0): # Carrega e configura o template recebido
+def load(config, index=2, questionCount=0, rightAnswer=0, score=0): # Carrega e configura o template recebido
     if (config[index]['template'] == '1'):
         win = templates.Template1()
         for x in range(1, 5):

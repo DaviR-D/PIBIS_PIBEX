@@ -25,6 +25,8 @@ class Main(Gtk.Window): # Carrega elementos UI
 		self.createButton = self.builder.get_object('createButton')
 		self.templateEntry = self.builder.get_object('templateEntry')
 		self.nameChooser = self.builder.get_object('nameChooser')
+		self.categoria = self.builder.get_object('categoria')
+		self.dificuldade = self.builder.get_object('dificuldade')
 		self.img = []
 		for x in range(1, 7):
 			self.img.append(self.builder.get_object('img' + str(x)))
@@ -34,7 +36,10 @@ class Main(Gtk.Window): # Carrega elementos UI
 		self.newWindow.show()
 
 	def createButtonClicked(self, widget): # Passa a lista de templates selecionados e o nome do arquivo para o builderController
-		builderController.Build(self.templateEntry.get_text().split(), 'Custom/' + self.nameChooser.get_text() + '.config')
+		file = list()
+		file.append(self.dificuldade.get_active_id())
+		file.append(self.categoria.get_active_id())
+		builderController.Build(self.templateEntry.get_text().split(), 'Custom/' + self.nameChooser.get_text() + '.config', file)
 		self.newWindow.destroy()
 
 	def load(self, wiget):
