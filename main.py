@@ -14,6 +14,7 @@ class Main(Gtk.Window): # Carrega elementos UI
 		self.deleteButton = self.builder.get_object('delete')
 		self.randomButton = self.builder.get_object('random')
 		self.defaultButton = self.builder.get_object('default')
+		self.loadButton.set_current_folder('Custom')
 		self.window.connect("delete-event", Gtk.main_quit)
 		self.builder.connect_signals(self)
 
