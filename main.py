@@ -48,6 +48,13 @@ class Main(Gtk.Window): # Carrega elementos UI
 		builderController.Build(self.templateEntry.get_text().split(), 'Custom/' + self.nameChooser.get_text() + '.config', file)
 		self.newWindow.destroy()
 
+	def random(self, widget): # Carrega uma configuração aleatória
+		self.randomWindow = self.builder.get_object('randomWindow')
+		self.categoria = self.builder.get_object('categoria1')
+		self.dificuldade = self.builder.get_object('dificuldade1')
+		self.builder.connect_signals(self)
+		self.randomWindow.show()
+
 	def load(self, wiget):
 		with open (self.loadButton.get_filename()) as conf:
 			build = json.load(conf)
