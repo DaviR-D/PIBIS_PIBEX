@@ -4,23 +4,14 @@ from gi.repository import Gtk
 from Controllers import builder
 
 def Build(templates, fileName, file=[], index=0): # Carrega uma janela de criação de configuração para cada template da lista
-    if (int(templates[index]) == 1):
-        Builder = builder.Builder1()
+    Builders = [builder.Builder1,
+    builder.Builder2,
+    builder.Builder3,
+    builder.Builder4,
+    builder.Builder5,
+    builder.Builder6]
 
-    elif (int(templates[index]) == 2):
-        Builder = builder.Builder2()
-
-    elif (int(templates[index]) == 3):
-        Builder = builder.Builder3()
-
-    elif (int(templates[index]) == 4):
-        Builder = builder.Builder4()
-
-    elif (int(templates[index]) == 5):
-        Builder = builder.Builder5()
-
-    elif (int(templates[index]) == 6):
-        Builder = builder.Builder6()
+    Builder = Builders[int(templates[index]) - 1]()
 
     Builder.templateList = templates
     Builder.index = index + 1
