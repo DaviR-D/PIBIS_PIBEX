@@ -3,6 +3,8 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 import json
 from Controllers import builderController
+from os import path
+from shutil import copy2 as copy
 
 class Builder(Gtk.Window):
 	def __init__(self):
@@ -22,6 +24,12 @@ class Builder(Gtk.Window):
 				json.dump(self.file, config)
 
 		self.window.destroy()
+
+	def addFile(self, file):
+		filePath = 'Imagens/' + path.basename(file)
+		if(not path.exists(filePath)):
+			copy(file, 'Imagens')
+		return filePath
 
 
 class Builder1(Builder):
@@ -55,7 +63,7 @@ class Builder2(Builder):
 
 	def salvar(self, widget):
 		self.file.append(dict())
-		self.file[-1]['imagem'] = self.seletorImagem.get_filename()
+		self.file[-1]['imagem'] = self.addFile(self.seletorImagem.get_filename())
 		self.file[-1]['text'] = self.text.get_text()
 		self.file[-1]['template'] = '2'
 		self.Next()
@@ -75,7 +83,7 @@ class Builder3(Builder):
 	def salvar(self, widget):
 		self.file.append(dict())
 		for x in range(1, 9):
-			self.file[-1]['imagem' + str(x)] = self.seletoresImagem[x - 1].get_filename()
+			self.file[-1]['imagem' + str(x)] = self.addFile(self.seletoresImagem[x - 1].get_filename())
 			self.file[-1]['text' + str(x)] = self.textInputs[x - 1].get_text()
 		self.file[-1]['template'] = '3'
 		self.Next()
@@ -96,7 +104,7 @@ class Builder4(Builder):
 	def salvar(self, widget):
 		self.file.append(dict())
 		for x in range(1, 5):
-			self.file[-1]['imagem' + str(x)] = self.seletoresImagem[x - 1].get_filename()
+			self.file[-1]['imagem' + str(x)] = self.addFile(self.seletoresImagem[x - 1].get_filename())
 			self.file[-1]['text' + str(x)] = self.textInputs[x - 1].get_text()
 		self.file[-1]['template'] = '4'
 		self.Next()
@@ -117,7 +125,7 @@ class Builder5(Builder):
 	def salvar(self, widget):
 		self.file.append(dict())
 		for x in range(1, 6):
-			self.file[-1]['imagem' + str(x)] = self.seletoresImagem[x - 1].get_filename()
+			self.file[-1]['imagem' + str(x)] = self.addFile(self.seletoresImagem[x - 1].get_filename())
 		self.file[-1]['text'] = self.textInput.get_text()
 		self.file[-1]['correta'] = self.alternativaCorreta.get_text()
 		self.file[-1]['template'] = '5'
@@ -134,7 +142,7 @@ class Builder6(Builder):
 
 	def salvar(self, widget):
 		self.file.append(dict())
-		self.file[-1]['imagem'] = self.seletorImagem.get_filename()
+		self.file[-1]['imagem'] = self.addFile(self.seletorImagem.get_filename())
 		self.file[-1]['correta'] = self.respostaCorreta.get_text()
 		self.file[-1]['template'] = '6'
 		self.Next()
