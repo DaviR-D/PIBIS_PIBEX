@@ -20,6 +20,8 @@ class Template(Gtk.Window):
 			self.final()
 
 	def final(self): # Carrega a janela final
+		self.finalWindow = self.builder.get_object('finalWindow')
+		self.finalText = self.builder.get_object('finalText')
 		self.finalText.set_label(
 		'Você acertou '
 		+ str(self.rightAnswer)
@@ -39,8 +41,6 @@ class Template(Gtk.Window):
 class TemplateQuestion(Template):
 	def __init__(self):
 		Template.__init__(self)
-		self.finalWindow = self.builder.get_object('finalWindow')
-		self.finalText = self.builder.get_object('finalText')
 		self.respostaCorreta = str()
 		self.resposta = str()
 		self.questionCount = 0
