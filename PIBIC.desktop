@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=GNOME;GTK;Utility;
+Comment[pt_BR]=
+Comment=
+Exec=python3 main.py
+GenericName[pt_BR]=PIBIC
+GenericName=PIBIC
+Icon=
+Name=PIBIC
+Type=Application
