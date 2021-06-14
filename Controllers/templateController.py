@@ -7,7 +7,13 @@ import random
 
 def load(config, index=2, questionCount=0, rightAnswer=0, score=0): # Carrega e configura o template recebido
 
-    build = [buildTemplate1, buildTemplate2, buildTemplate3, buildTemplate4, buildTemplate5, buildTemplate6]
+    build = [buildTemplate1,
+    buildTemplate2,
+    buildTemplate3,
+    buildTemplate4,
+    buildTemplate5,
+    buildTemplate6]
+    
     win = build[int(config[index]['template']) - 1](config, index)
     win.questionCount = questionCount
     win.rightAnswer = rightAnswer
