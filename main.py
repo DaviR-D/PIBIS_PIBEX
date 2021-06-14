@@ -1,8 +1,10 @@
 import gi
+import json
+import random
+from glob import glob
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GdkPixbuf, Gio
 from Controllers import templateController, builderController
-import json
 
 class Main(Gtk.Window): # Carrega elementos UI
 	def __init__(self):
@@ -13,15 +15,14 @@ class Main(Gtk.Window): # Carrega elementos UI
 		self.loadButton = self.builder.get_object('load')
 		self.deleteButton = self.builder.get_object('delete')
 		self.randomButton = self.builder.get_object('random')
-		self.defaultButton = self.builder.get_object('default')
 		self.loadButton.set_current_folder('Custom')
 		self.window.connect("delete-event", Gtk.main_quit)
 		self.builder.connect_signals(self)
 
-	def defaultBuild(self, widget):
-		pass
 
 	def newBuild(self, widget): # Carrega e apresenta a janela de seleção de templates e nome para a nova configuração
+		self.builder = Gtk.Builder()
+		self.builder.add_from_file('UI/main.glade')
 		self.newWindow = self.builder.get_object('newWindow')
 		self.createButton = self.builder.get_object('createButton')
 		self.templateEntry = self.builder.get_object('templateEntry')
@@ -49,17 +50,34 @@ class Main(Gtk.Window): # Carrega elementos UI
 		builderController.Build(self.templateEntry.get_text().split(), 'Custom/' + self.nameChooser.get_text() + '.config', file)
 		self.newWindow.destroy()
 
-	def random(self, widget): # Carrega uma configuração aleatória
+	def random(self, widget): # Carrega a janela de configuração aleatória
+		self.builder = Gtk.Builder()
+		self.builder.add_from_file('UI/main.glade')
 		self.randomWindow = self.builder.get_object('randomWindow')
 		self.categoria = self.builder.get_object('categoria1')
 		self.dificuldade = self.builder.get_object('dificuldade1')
 		self.builder.connect_signals(self)
 		self.randomWindow.show()
 
-	def load(self, wiget):
-		with open (self.loadButton.get_filename()) as conf:
+	def loadButtonSet(self, widget):
+		self.loadConfig(self.loadButton.get_filename())
+
+	def loadConfig(self, config):
+		with open(config) as conf:
 			build = json.load(conf)
 		templateController.load(build)
+
+	def loadRandom(self, widget):
+		categoria = self.categoria.get_active_id()
+		dificuldade = self.dificuldade.get_active_id()
+		listConfig = glob('Custom/*')
+		random.shuffle(listConfig)
+		for config in listConfig:
+			with open(config) as conf:
+				build = json.load(conf)
+				if(build[0], build[1] == dificuldade, categoria):
+					self.loadConfig(config)
+					break
 
 
 
