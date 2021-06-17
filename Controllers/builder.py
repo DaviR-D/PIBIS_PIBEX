@@ -45,7 +45,7 @@ class Builder1(Builder):
 
 	def salvar(self, widget):
 		self.file.append(dict())
-		self.file[-1]['imagem'] = self.seletorImagem.get_filename()
+		self.file[-1]['imagem'] = self.addFile(self.seletorImagem.get_filename())
 		self.file[-1]['template'] = '1'
 		for x in range(1, 5):
 			self.file[-1]['option' + str(x)] = self.options[x - 1].get_text()
