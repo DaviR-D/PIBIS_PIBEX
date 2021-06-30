@@ -159,5 +159,5 @@ class Template6(TemplateQuestion):
 		self.builder.connect_signals(self)
 
 	def onButtonClicked(self, widget):
-		self.resposta = self.input.get_text()
+		self.resposta = self.input.get_text().lower()
 		self.Check(widget)

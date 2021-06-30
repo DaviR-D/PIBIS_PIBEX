@@ -13,7 +13,7 @@ def load(config, index=2, questionCount=0, rightAnswer=0, score=0): # Carrega e 
     buildTemplate4,
     buildTemplate5,
     buildTemplate6]
-    
+
     win = build[int(config[index]['template']) - 1](config, index)
     win.questionCount = questionCount
     win.rightAnswer = rightAnswer
@@ -69,7 +69,7 @@ def buildTemplate5(config, index):
 
 def buildTemplate6(config, index):
     win = templates.Template6()
-    win.respostaCorreta = config[index]['correta']
+    win.respostaCorreta = config[index]['correta'].lower()
     pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['imagem'], width=500, height=300, preserve_aspect_ratio=False)
     win.image.set_from_pixbuf(pixbuf)
     return win
