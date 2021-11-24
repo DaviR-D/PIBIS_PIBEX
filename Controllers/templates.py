@@ -46,6 +46,7 @@ class TemplateQuestion(Template):
 		self.questionCount = 0
 		self.rightAnswer = 0
 		self.Score = 0
+		self.mostrarCorreta = True
 
 	def Check(self, widget): # Checa se a resposta recebida corresponde à resposta configurada como correta
 		self.questionCount += 1
@@ -63,6 +64,9 @@ class TemplateQuestion(Template):
 		self.result()
 		self.Next(widget)
 
+		if(self.mostrarCorreta):
+			self.showRightAnswer()
+
 	def result(self):
 		self.resultWindow.show()
 		for x in range(15):
@@ -70,6 +74,14 @@ class TemplateQuestion(Template):
 				Gtk.main_iteration()
 			sleep(0.1)
 		self.resultWindow.destroy()
+
+	def showRightAnswer(self):
+		self.resultWindow = self.builder.get_object('respostaCorreta')
+		self.respostaTexto = self.builder.get_object('resposta')
+		resposta = self.config[self.index - 1]['option' + str(self.respostaCorreta)]
+		self.respostaTexto.set_label('A respsota correta é: ' + resposta)
+		self.result()
+
 
 
 class Template1(TemplateQuestion):
@@ -114,6 +126,7 @@ class Template4(TemplateQuestion):
 	def __init__(self):
 		TemplateQuestion.__init__(self)
 		self.window = self.builder.get_object('4')
+		self.janelaExplic = self.builder.get_object('explicT4')
 		self.images = list()
 		self.texts = list()
 		self.inputs = list()
@@ -129,7 +142,8 @@ class Template4(TemplateQuestion):
 		for input in self.inputs:
 			self.resposta.append(int(input.get_text()))
 		self.Check(widget)
-
+	def okBtn(self, widget):
+		self.janelaExplic.hide()
 
 class Template5(TemplateQuestion):
 	def __init__(self):
@@ -161,3 +175,20 @@ class Template6(TemplateQuestion):
 	def onButtonClicked(self, widget):
 		self.resposta = self.input.get_text().lower()
 		self.Check(widget)
+
+#class Template7(Template1):
+#	def __init__(self):
+#		Template1.__init__(self)
+#		t2 = ''
+#	def onButtonClicked(self, widget):
+#		self.questionCount += 1
+#
+#		if(self.resposta == self.respostaCorreta):
+#			self.Score += 10
+#			self.rightAnswer += 1
+#			self.resultWindow = self.builder.get_object('corretaWindow')
+#
+#		else:
+#			self.Score -= 5
+#			self.resultWindow = self.builder.get_object('erradaWindow')
+#

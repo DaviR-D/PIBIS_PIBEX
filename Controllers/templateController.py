@@ -49,6 +49,8 @@ def buildTemplate4(config, index):
         pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['imagem' + str(x)], width=100, height=100, preserve_aspect_ratio=False)
         win.images[x - 1].set_from_pixbuf(pixbuf)
         win.texts[x - 1].set_label(config[index]['text' + str(y)])
+    win.window.show()
+    win.janelaExplic.show()
     return win
 
 def buildTemplate5(config, index):
@@ -66,3 +68,11 @@ def buildTemplate6(config, index):
     pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['imagem'], width=500, height=300, preserve_aspect_ratio=False)
     win.image.set_from_pixbuf(pixbuf)
     return win
+
+#def buildTemplate7(config, index):
+#    t1 = buildTemplate1(config, index)
+#    t2 = buildTemplate2([{'imagem':config[index][imagem], 'text':config[index]['correta']}], 0)
+#    win = templates.Template7()
+#    win = t2
+#    win.t1 = t1
+#    win.t2 = t2
