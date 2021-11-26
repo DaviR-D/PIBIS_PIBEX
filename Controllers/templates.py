@@ -52,6 +52,7 @@ class TemplateQuestion(Template):
 		self.questionCount += 1
 
 		if(self.resposta == self.respostaCorreta):
+			respostaErrada = False
 			self.Score += 10
 			self.rightAnswer += 1
 			self.resultWindow = self.builder.get_object('corretaWindow')
@@ -59,28 +60,29 @@ class TemplateQuestion(Template):
 		else:
 			self.Score -= 5
 			self.resultWindow = self.builder.get_object('erradaWindow')
+			respostaErrada = True
 
 		self.window.hide()
-		self.result()
+		self.result(0.1)
 		self.Next(widget)
 
-		if(self.mostrarCorreta):
+		if(self.mostrarCorreta and respostaErrada):
 			self.showRightAnswer()
 
-	def result(self):
+	def result(self, tempo):
 		self.resultWindow.show()
 		for x in range(15):
 			while Gtk.events_pending():
 				Gtk.main_iteration()
-			sleep(0.1)
+			sleep(tempo)
 		self.resultWindow.destroy()
 
 	def showRightAnswer(self):
 		self.resultWindow = self.builder.get_object('respostaCorreta')
 		self.respostaTexto = self.builder.get_object('resposta')
 		resposta = self.config[self.index - 1]['option' + str(self.respostaCorreta)]
-		self.respostaTexto.set_label('A respsota correta é: ' + resposta)
-		self.result()
+		self.respostaTexto.set_label('A resposta correta é: ' + resposta)
+		self.result(0.3)
 
 
 
