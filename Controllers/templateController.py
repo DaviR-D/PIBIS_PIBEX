@@ -5,7 +5,7 @@ from gi.repository import Gtk, GdkPixbuf, Gio
 from Controllers import templates
 import random
 
-def load(config, index=2, questionCount=0, rightAnswer=0, score=0): # Carrega e configura o template recebido
+def load(config, name='', index=2, questionCount=0, rightAnswer=0, score=0): # Carrega e configura o template recebido
 
     win = eval('buildTemplate' + str(config[index]['template']))(config, index)
     win.questionCount = questionCount
@@ -13,6 +13,8 @@ def load(config, index=2, questionCount=0, rightAnswer=0, score=0): # Carrega e 
     win.Score = score
     win.config = config
     win.index = index + 1
+    win.name = name
+    win.window.set_title(name + ' ' + str(index - 1))
     win.window.show()
 
 def buildTemplate1(config, index):

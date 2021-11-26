@@ -4,6 +4,7 @@ import random
 from glob import glob
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GdkPixbuf, Gio
+from os.path import basename
 from Controllers import templateController, builderController
 
 class Main(Gtk.Window): # Carrega elementos UI
@@ -65,7 +66,7 @@ class Main(Gtk.Window): # Carrega elementos UI
 	def loadConfig(self, config):
 		with open(config) as conf:
 			build = json.load(conf)
-		templateController.load(build)
+		templateController.load(build, basename(config)[:-7:])
 
 	def loadRandom(self, widget):
 		categoria = self.categoria.get_active_id()

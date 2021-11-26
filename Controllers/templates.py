@@ -11,11 +11,12 @@ class Template(Gtk.Window):
 		self.builder.add_from_file('UI/templates.glade')
 		self.config = list()
 		self.index = list()
+		self.name = str()
 
 	def Next(self, widget): # Chama o próximo template da lista
 		self.window.destroy()
 		if(len(self.config) > self.index):
-			templateController.load(self.config, self.index, self.questionCount, self.rightAnswer, self.Score)
+			templateController.load(self.config, self.name, self.index, self.questionCount, self.rightAnswer, self.Score)
 		elif(self.questionCount):
 			self.final()
 
