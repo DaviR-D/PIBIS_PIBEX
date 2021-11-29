@@ -179,19 +179,22 @@ class Template6(TemplateQuestion):
 		self.resposta = self.input.get_text().lower()
 		self.Check(widget)
 
-#class Template7(Template1):
-#	def __init__(self):
-#		Template1.__init__(self)
-#		t2 = ''
-#	def onButtonClicked(self, widget):
-#		self.questionCount += 1
-#
-#		if(self.resposta == self.respostaCorreta):
-#			self.Score += 10
-#			self.rightAnswer += 1
-#			self.resultWindow = self.builder.get_object('corretaWindow')
-#
-#		else:
-#			self.Score -= 5
-#			self.resultWindow = self.builder.get_object('erradaWindow')
-#
+class Template7(TemplateQuestion):
+	def __init__(self):
+		TemplateQuestion.__init__(self)
+		self.window = self.builder.get_object('7')
+		self.images = list()
+		self.inputs = list()
+		for x in range(1,21):
+			self.images.append(self.builder.get_object('7image' + str(x)))
+
+		for x in range(1,5):
+			self.inputs.append(self.builder.get_object('7input' + str(x)))
+
+		self.builder.connect_signals(self)
+
+	def onButtonClicked(self, widget):
+		self.resposta = list()
+		for input in self.inputs:
+			self.resposta.append(int(input.get_text()))
+		self.Check(widget)

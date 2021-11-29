@@ -71,10 +71,19 @@ def buildTemplate6(config, index):
     win.image.set_from_pixbuf(pixbuf)
     return win
 
-#def buildTemplate7(config, index):
-#    t1 = buildTemplate1(config, index)
-#    t2 = buildTemplate2([{'imagem':config[index][imagem], 'text':config[index]['correta']}], 0)
-#    win = templates.Template7()
-#    win = t2
-#    win.t1 = t1
-#    win.t2 = t2
+def buildTemplate7(config, index):
+    win = templates.Template7()
+    imageCount = {'7image1':0, '7image2':0, '7image3':0, '7image4':0}
+
+    for x  in range(1, 5):
+        pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['imagem' + str(x)], width=50, height=50, preserve_aspect_ratio=False)
+        win.images[x - 1].set_from_pixbuf(pixbuf)
+
+    for x  in range(5, 21):
+        rand = str(random.randrange(1, 5))
+        pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['imagem' + rand], width=50, height=50, preserve_aspect_ratio=False)
+        win.images[x - 1].set_from_pixbuf(pixbuf)
+        imageCount['7image' + rand] += 1
+    win.respostaCorreta = list(imageCount.values())
+    win.window.show()
+    return win
