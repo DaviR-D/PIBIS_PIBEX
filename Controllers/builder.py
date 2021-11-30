@@ -146,3 +146,21 @@ class Builder6(Builder):
 		self.file[-1]['correta'] = self.respostaCorreta.get_text()
 		self.file[-1]['template'] = '6'
 		self.Next()
+
+class Builder7(Builder):
+	def __init__(self):
+		Builder.__init__(self)
+		self.window = self.builder.get_object('7')
+		self.seletoresImagem = list()
+		self.button = self.builder.get_object('saveButton7')
+		for x in range(1,5):
+			self.seletoresImagem.append(self.builder.get_object('7seletorImagem' + str(x)))
+
+		self.builder.connect_signals(self)
+
+	def salvar(self, widget):
+		self.file.append(dict())
+		for x in range(1, 5):
+			self.file[-1]['imagem' + str(x)] = self.addFile(self.seletoresImagem[x - 1].get_filename())
+		self.file[-1]['template'] = '7'
+		self.Next()
