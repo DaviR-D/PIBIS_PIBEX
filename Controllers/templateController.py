@@ -87,3 +87,14 @@ def buildTemplate7(config, index):
     win.respostaCorreta = list(imageCount.values())
     win.window.show()
     return win
+
+def buildTemplate8(config, index):
+    win = templates.Template8()
+
+    for x  in range(1, 5):
+        pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['imagem' + str(x)], width=50, height=50, preserve_aspect_ratio=False)
+        win.images[x - 1].set_from_pixbuf(pixbuf)
+
+    win.respostaCorreta =
+    win.window.show()
+    return win
