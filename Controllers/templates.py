@@ -198,3 +198,23 @@ class Template7(TemplateQuestion):
 		for input in self.inputs:
 			self.resposta.append(int(input.get_text()))
 		self.Check(widget)
+
+
+class Template8(TemplateQuestion):
+	def __init__(self):
+		TemplateQuestion.__init__(self)
+		self.window = self.builder.get_object('8')
+		self.texts = list()
+		self.inputs = list()
+
+		for x in range(1,7):
+			self.inputs.append(self.builder.get_object('8input' + str(x)))
+			self.texts.append(self.builder.get_object('8text' + str(x)))
+
+		self.builder.connect_signals(self)
+
+	def onButtonClicked(self, widget):
+		self.resposta = list()
+		for input in self.inputs:
+			self.resposta.append(int(input.get_text()))
+		self.Check(widget)
