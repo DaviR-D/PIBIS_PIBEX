@@ -47,7 +47,7 @@ class TemplateQuestion(Template):
 		self.questionCount = 0
 		self.rightAnswer = 0
 		self.Score = 0
-		self.mostrarCorreta = True
+		self.mostrarCorreta = False
 
 	def Check(self, widget): # Checa se a resposta recebida corresponde à resposta configurada como correta
 		self.questionCount += 1
