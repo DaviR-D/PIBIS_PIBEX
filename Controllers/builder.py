@@ -164,3 +164,17 @@ class Builder7(Builder):
 			self.file[-1]['imagem' + str(x)] = self.addFile(self.seletoresImagem[x - 1].get_filename())
 		self.file[-1]['template'] = '7'
 		self.Next()
+
+class Builder8(Builder):
+	def __init__(self):
+		Builder.__init__(self)
+		self.window = self.builder.get_object('8')
+		self.input = self.builder.get_object('8input1')
+
+		self.builder.connect_signals(self)
+
+	def salvar(self, widget):
+		self.file.append(dict())
+		self.file[-1]['limiteNum'] = self.input.get_text()
+		self.file[-1]['template'] = '8'
+		self.Next()

@@ -91,10 +91,13 @@ def buildTemplate7(config, index):
 def buildTemplate8(config, index):
     win = templates.Template8()
 
-    for x  in range(1, 5):
-        pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(config[index]['imagem' + str(x)], width=50, height=50, preserve_aspect_ratio=False)
-        win.images[x - 1].set_from_pixbuf(pixbuf)
+    win.respostaCorreta = list()
 
-    win.respostaCorreta =
+    for text in win.texts:
+        x = random.randrange(1, int(config[index]['limiteNum']))
+        y = random.randrange(1, int(config[index]['limiteNum']))
+        text.set_label(str(x) + ' + ' + str(y))
+        win.respostaCorreta.append(x + y)
+
     win.window.show()
     return win
