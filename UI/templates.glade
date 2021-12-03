@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.2 -->
+<!-- Generated with glade 3.38.2 -->
 <interface>
   <requires lib="gtk+" version="3.16"/>
   <object class="GtkWindow" id="1">
-    <property name="can_focus">False</property>
-    <property name="window_position">center</property>
-    <property name="default_width">500</property>
-    <property name="default_height">500</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <property name="can-focus">False</property>
+    <property name="window-position">center</property>
+    <property name="default-width">500</property>
+    <property name="default-height">500</property>
     <child>
+      <!-- n-columns=3 n-rows=3 -->
       <object class="GtkGrid">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="row_spacing">10</property>
-        <property name="column_spacing">5</property>
-        <property name="row_homogeneous">True</property>
-        <property name="column_homogeneous">True</property>
+        <property name="can-focus">False</property>
+        <property name="row-spacing">10</property>
+        <property name="column-spacing">5</property>
+        <property name="row-homogeneous">True</property>
+        <property name="column-homogeneous">True</property>
         <child>
           <object class="GtkImage" id="1image1">
-            <property name="width_request">500</property>
-            <property name="height_request">300</property>
+            <property name="width-request">500</property>
+            <property name="height-request">300</property>
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="double_buffered">False</property>
+            <property name="can-focus">False</property>
+            <property name="double-buffered">False</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">0</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">0</property>
             <property name="width">3</property>
           </packing>
         </child>
         <child>
           <object class="GtkBox">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_start">5</property>
-            <property name="margin_end">5</property>
-            <property name="margin_bottom">5</property>
+            <property name="can-focus">False</property>
+            <property name="margin-start">5</property>
+            <property name="margin-end">5</property>
+            <property name="margin-bottom">5</property>
             <property name="orientation">vertical</property>
             <property name="spacing">5</property>
             <property name="homogeneous">True</property>
@@ -47,8 +45,8 @@
               <object class="GtkButton" id="1option1">
                 <property name="label" translatable="yes">Opção 1</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="onButtonClicked" swapped="no"/>
               </object>
               <packing>
@@ -61,8 +59,8 @@
               <object class="GtkButton" id="1option2">
                 <property name="label" translatable="yes">Opção 2</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="onButtonClicked" swapped="no"/>
               </object>
               <packing>
@@ -75,8 +73,8 @@
               <object class="GtkButton" id="1option3">
                 <property name="label" translatable="yes">Opção 3</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="onButtonClicked" swapped="no"/>
               </object>
               <packing>
@@ -89,8 +87,8 @@
               <object class="GtkButton" id="1option4">
                 <property name="label" translatable="yes">Opção 4</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="onButtonClicked" swapped="no"/>
               </object>
               <packing>
@@ -101,48 +99,55 @@
             </child>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">1</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">1</property>
             <property name="width">3</property>
           </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
         </child>
       </object>
     </child>
   </object>
   <object class="GtkWindow" id="2">
-    <property name="can_focus">False</property>
-    <property name="window_position">center</property>
-    <property name="default_width">500</property>
-    <property name="default_height">500</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <property name="can-focus">False</property>
+    <property name="window-position">center</property>
+    <property name="default-width">500</property>
+    <property name="default-height">500</property>
     <child>
+      <!-- n-columns=3 n-rows=4 -->
       <object class="GtkGrid">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="row_spacing">20</property>
-        <property name="column_homogeneous">True</property>
+        <property name="can-focus">False</property>
+        <property name="row-spacing">20</property>
+        <property name="column-homogeneous">True</property>
         <child>
           <object class="GtkImage" id="2image1">
-            <property name="width_request">500</property>
-            <property name="height_request">300</property>
+            <property name="width-request">500</property>
+            <property name="height-request">300</property>
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="double_buffered">False</property>
+            <property name="can-focus">False</property>
+            <property name="double-buffered">False</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">0</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">0</property>
             <property name="width">3</property>
           </packing>
         </child>
         <child>
           <object class="GtkAccelLabel" id="2text1">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_top">20</property>
+            <property name="can-focus">False</property>
+            <property name="margin-top">20</property>
             <property name="label" translatable="yes">label</property>
             <property name="justify">center</property>
             <attributes>
@@ -150,8 +155,8 @@
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">1</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">1</property>
             <property name="width">3</property>
           </packing>
         </child>
@@ -159,20 +164,20 @@
           <object class="GtkButton" id="2button1">
             <property name="label" translatable="yes">Entendido</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="margin_left">5</property>
-            <property name="margin_right">5</property>
-            <property name="margin_start">20</property>
-            <property name="margin_end">20</property>
-            <property name="margin_top">100</property>
-            <property name="margin_bottom">20</property>
-            <property name="always_show_image">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="margin-left">5</property>
+            <property name="margin-right">5</property>
+            <property name="margin-start">20</property>
+            <property name="margin-end">20</property>
+            <property name="margin-top">100</property>
+            <property name="margin-bottom">20</property>
+            <property name="always-show-image">True</property>
             <signal name="clicked" handler="Next" swapped="no"/>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">3</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">3</property>
           </packing>
         </child>
         <child>
@@ -194,246 +199,274 @@
     </child>
   </object>
   <object class="GtkWindow" id="3">
-    <property name="can_focus">False</property>
-    <property name="window_position">center</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <property name="can-focus">False</property>
+    <property name="window-position">center</property>
     <child>
+      <!-- n-columns=3 n-rows=10 -->
       <object class="GtkGrid">
-        <property name="width_request">500</property>
-        <property name="height_request">500</property>
+        <property name="width-request">500</property>
+        <property name="height-request">500</property>
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="row_spacing">5</property>
-        <property name="column_homogeneous">True</property>
+        <property name="can-focus">False</property>
+        <property name="row-spacing">5</property>
+        <property name="column-homogeneous">True</property>
         <child>
           <object class="GtkImage" id="3image2">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">0</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">0</property>
           </packing>
         </child>
         <child>
           <object class="GtkImage" id="3image1">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">0</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">0</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="3text1">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">10</property>
+            <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 14"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">1</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">1</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="3text2">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">10</property>
+            <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 14"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">1</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">1</property>
           </packing>
         </child>
         <child>
           <object class="GtkImage" id="3image3">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">2</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">2</property>
           </packing>
         </child>
         <child>
           <object class="GtkImage" id="3image4">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">2</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">2</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="3text4">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">10</property>
+            <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 14"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">3</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">3</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="3text3">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">10</property>
+            <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 14"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">3</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">3</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="3text5">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">10</property>
+            <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 14"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">5</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">5</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="3text6">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">10</property>
+            <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 14"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">5</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">5</property>
           </packing>
         </child>
         <child>
           <object class="GtkImage" id="3image5">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">4</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">4</property>
           </packing>
         </child>
         <child>
           <object class="GtkImage" id="3image6">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">4</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">4</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="3text7">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">10</property>
+            <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 14"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">7</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">7</property>
           </packing>
         </child>
         <child>
           <object class="GtkImage" id="3image7">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">6</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">6</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="3text8">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">10</property>
+            <property name="can-focus">False</property>
+            <property name="margin-bottom">10</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 14"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">7</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">7</property>
           </packing>
         </child>
         <child>
           <object class="GtkImage" id="3image8">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">6</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">6</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="3button1">
             <property name="label" translatable="yes">Entendido</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="margin_left">5</property>
-            <property name="margin_right">5</property>
-            <property name="margin_start">10</property>
-            <property name="margin_end">10</property>
-            <property name="margin_top">10</property>
-            <property name="margin_bottom">10</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="margin-left">5</property>
+            <property name="margin-right">5</property>
+            <property name="margin-start">10</property>
+            <property name="margin-end">10</property>
+            <property name="margin-top">10</property>
+            <property name="margin-bottom">10</property>
             <signal name="clicked" handler="Next" swapped="no"/>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">9</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">9</property>
             <property name="width">2</property>
           </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
         </child>
         <child>
           <placeholder/>
@@ -445,192 +478,190 @@
     </child>
   </object>
   <object class="GtkWindow" id="4">
-    <property name="can_focus">False</property>
-    <property name="window_position">center</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <property name="can-focus">False</property>
+    <property name="window-position">center</property>
     <child>
+      <!-- n-columns=4 n-rows=6 -->
       <object class="GtkGrid">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="margin_start">10</property>
-        <property name="margin_end">10</property>
-        <property name="margin_top">10</property>
-        <property name="margin_bottom">10</property>
-        <property name="row_spacing">10</property>
-        <property name="column_spacing">10</property>
+        <property name="can-focus">False</property>
+        <property name="margin-start">10</property>
+        <property name="margin-end">10</property>
+        <property name="margin-top">10</property>
+        <property name="margin-bottom">10</property>
+        <property name="row-spacing">10</property>
+        <property name="column-spacing">10</property>
         <child>
           <object class="GtkLabel" id="4text1">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 20"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">0</property>
+            <property name="left-attach">2</property>
+            <property name="top-attach">0</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="4text2">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 20"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">1</property>
+            <property name="left-attach">2</property>
+            <property name="top-attach">1</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="4text3">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 20"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">2</property>
+            <property name="left-attach">2</property>
+            <property name="top-attach">2</property>
           </packing>
         </child>
         <child>
           <object class="GtkImage" id="4image1">
-            <property name="width_request">100</property>
-            <property name="height_request">100</property>
+            <property name="width-request">100</property>
+            <property name="height-request">100</property>
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_end">20</property>
+            <property name="can-focus">False</property>
+            <property name="margin-end">20</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">0</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">0</property>
           </packing>
         </child>
         <child>
           <object class="GtkImage" id="4image2">
-            <property name="width_request">100</property>
-            <property name="height_request">100</property>
+            <property name="width-request">100</property>
+            <property name="height-request">100</property>
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_end">20</property>
+            <property name="can-focus">False</property>
+            <property name="margin-end">20</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">1</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">1</property>
           </packing>
         </child>
         <child>
           <object class="GtkImage" id="4image3">
-            <property name="width_request">100</property>
-            <property name="height_request">100</property>
+            <property name="width-request">100</property>
+            <property name="height-request">100</property>
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_end">20</property>
+            <property name="can-focus">False</property>
+            <property name="margin-end">20</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">2</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">2</property>
           </packing>
         </child>
         <child>
           <object class="GtkImage" id="4image4">
-            <property name="width_request">100</property>
-            <property name="height_request">100</property>
+            <property name="width-request">100</property>
+            <property name="height-request">100</property>
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_end">20</property>
+            <property name="can-focus">False</property>
+            <property name="margin-end">20</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">3</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">3</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="4text4">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 20"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">3</property>
+            <property name="left-attach">2</property>
+            <property name="top-attach">3</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">1</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">0</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">0</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">2</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">1</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">1</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">3</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">2</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">2</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">4</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">3</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">3</property>
           </packing>
         </child>
         <child>
           <object class="GtkBox">
-            <property name="width_request">0</property>
+            <property name="width-request">0</property>
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="border_width">0</property>
+            <property name="can-focus">False</property>
+            <property name="border-width">0</property>
             <property name="orientation">vertical</property>
             <property name="spacing">80</property>
             <child>
               <object class="GtkEntry" id="4input1">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="margin_top">30</property>
-                <property name="max_length">1</property>
-                <property name="input_purpose">number</property>
+                <property name="can-focus">True</property>
+                <property name="margin-top">30</property>
+                <property name="max-length">1</property>
+                <property name="input-purpose">number</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -641,8 +672,8 @@
             <child>
               <object class="GtkEntry" id="4input2">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="input_purpose">number</property>
+                <property name="can-focus">True</property>
+                <property name="input-purpose">number</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -653,8 +684,8 @@
             <child>
               <object class="GtkEntry" id="4input3">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="input_purpose">number</property>
+                <property name="can-focus">True</property>
+                <property name="input-purpose">number</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -665,8 +696,8 @@
             <child>
               <object class="GtkEntry" id="4input4">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="input_purpose">number</property>
+                <property name="can-focus">True</property>
+                <property name="input-purpose">number</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -676,8 +707,8 @@
             </child>
           </object>
           <packing>
-            <property name="left_attach">3</property>
-            <property name="top_attach">0</property>
+            <property name="left-attach">3</property>
+            <property name="top-attach">0</property>
             <property name="height">4</property>
           </packing>
         </child>
@@ -685,15 +716,15 @@
           <object class="GtkButton" id="4button1">
             <property name="label" translatable="yes">Verificar</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="margin_left">5</property>
-            <property name="margin_right">5</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="margin-left">5</property>
+            <property name="margin-right">5</property>
             <signal name="clicked" handler="onButtonClicked" swapped="no"/>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">5</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">5</property>
             <property name="width">4</property>
           </packing>
         </child>
@@ -713,139 +744,137 @@
     </child>
   </object>
   <object class="GtkImage" id="5image1">
-    <property name="width_request">150</property>
-    <property name="height_request">150</property>
+    <property name="width-request">150</property>
+    <property name="height-request">150</property>
     <property name="visible">True</property>
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <property name="stock">gtk-missing-image</property>
   </object>
   <object class="GtkImage" id="5image2">
-    <property name="width_request">150</property>
-    <property name="height_request">150</property>
+    <property name="width-request">150</property>
+    <property name="height-request">150</property>
     <property name="visible">True</property>
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <property name="stock">gtk-missing-image</property>
   </object>
   <object class="GtkImage" id="5image3">
     <property name="visible">True</property>
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <property name="stock">gtk-missing-image</property>
   </object>
   <object class="GtkImage" id="5image4">
     <property name="visible">True</property>
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <property name="stock">gtk-missing-image</property>
   </object>
   <object class="GtkImage" id="5image5">
-    <property name="width_request">150</property>
-    <property name="height_request">150</property>
+    <property name="width-request">150</property>
+    <property name="height-request">150</property>
     <property name="visible">True</property>
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <property name="stock">gtk-missing-image</property>
   </object>
   <object class="GtkWindow" id="5">
-    <property name="can_focus">False</property>
-    <property name="window_position">center</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <property name="can-focus">False</property>
+    <property name="window-position">center</property>
     <child>
+      <!-- n-columns=5 n-rows=3 -->
       <object class="GtkGrid">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="margin_start">10</property>
-        <property name="margin_end">10</property>
-        <property name="margin_top">10</property>
-        <property name="margin_bottom">10</property>
-        <property name="row_spacing">50</property>
-        <property name="column_spacing">10</property>
+        <property name="can-focus">False</property>
+        <property name="margin-start">10</property>
+        <property name="margin-end">10</property>
+        <property name="margin-top">10</property>
+        <property name="margin-bottom">10</property>
+        <property name="row-spacing">50</property>
+        <property name="column-spacing">10</property>
         <child>
           <object class="GtkLabel" id="5text1">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 20"/>
             </attributes>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">0</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">0</property>
             <property name="width">3</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="5option1">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
             <property name="image">5image1</property>
-            <property name="image_position">top</property>
+            <property name="image-position">top</property>
             <signal name="clicked" handler="onButtonClicked" swapped="no"/>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">2</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">2</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="5option2">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
             <property name="image">5image2</property>
-            <property name="image_position">top</property>
+            <property name="image-position">top</property>
             <signal name="clicked" handler="onButtonClicked" swapped="no"/>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">2</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">2</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="5option3">
-            <property name="width_request">150</property>
-            <property name="height_request">150</property>
+            <property name="width-request">150</property>
+            <property name="height-request">150</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
             <property name="image">5image3</property>
-            <property name="image_position">top</property>
+            <property name="image-position">top</property>
             <signal name="clicked" handler="onButtonClicked" swapped="no"/>
           </object>
           <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">2</property>
+            <property name="left-attach">2</property>
+            <property name="top-attach">2</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="5option4">
-            <property name="width_request">150</property>
-            <property name="height_request">150</property>
+            <property name="width-request">150</property>
+            <property name="height-request">150</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
             <property name="image">5image4</property>
-            <property name="image_position">top</property>
+            <property name="image-position">top</property>
             <signal name="clicked" handler="onButtonClicked" swapped="no"/>
           </object>
           <packing>
-            <property name="left_attach">3</property>
-            <property name="top_attach">2</property>
+            <property name="left-attach">3</property>
+            <property name="top-attach">2</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="5option5">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
             <property name="image">5image5</property>
-            <property name="image_position">top</property>
+            <property name="image-position">top</property>
             <signal name="clicked" handler="onButtonClicked" swapped="no"/>
           </object>
           <packing>
-            <property name="left_attach">4</property>
-            <property name="top_attach">2</property>
+            <property name="left-attach">4</property>
+            <property name="top-attach">2</property>
           </packing>
         </child>
         <child>
@@ -873,63 +902,61 @@
     </child>
   </object>
   <object class="GtkWindow" id="6">
-    <property name="width_request">500</property>
-    <property name="height_request">500</property>
-    <property name="can_focus">False</property>
-    <property name="window_position">center</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <property name="width-request">500</property>
+    <property name="height-request">500</property>
+    <property name="can-focus">False</property>
+    <property name="window-position">center</property>
     <child>
+      <!-- n-columns=3 n-rows=3 -->
       <object class="GtkGrid">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="row_spacing">20</property>
+        <property name="can-focus">False</property>
+        <property name="row-spacing">20</property>
         <child>
           <object class="GtkImage" id="6image1">
-            <property name="width_request">500</property>
-            <property name="height_request">300</property>
+            <property name="width-request">500</property>
+            <property name="height-request">300</property>
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">0</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">0</property>
             <property name="width">3</property>
           </packing>
         </child>
         <child>
           <object class="GtkEntry" id="6input1">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
+            <property name="can-focus">True</property>
             <property name="halign">center</property>
             <property name="valign">center</property>
             <signal name="activate" handler="onButtonClicked" swapped="no"/>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">2</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">2</property>
           </packing>
         </child>
         <child>
           <object class="GtkSeparator">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
           </object>
           <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">1</property>
+            <property name="left-attach">2</property>
+            <property name="top-attach">1</property>
           </packing>
         </child>
         <child>
           <object class="GtkSeparator">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">1</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">1</property>
           </packing>
         </child>
         <child>
@@ -945,19 +972,16 @@
     </child>
   </object>
   <object class="GtkWindow" id="7">
-    <property name="can_focus">False</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <property name="can-focus">False</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">Conte os objetos e coloque os devidos resultados</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 16"/>
@@ -972,7 +996,7 @@
         <child>
           <object class="GtkSeparator">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -981,188 +1005,189 @@
           </packing>
         </child>
         <child>
+          <!-- n-columns=4 n-rows=4 -->
           <object class="GtkGrid">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_top">12</property>
-            <property name="margin_bottom">31</property>
-            <property name="row_spacing">5</property>
-            <property name="row_homogeneous">True</property>
-            <property name="column_homogeneous">True</property>
+            <property name="can-focus">False</property>
+            <property name="margin-top">12</property>
+            <property name="margin-bottom">31</property>
+            <property name="row-spacing">5</property>
+            <property name="row-homogeneous">True</property>
+            <property name="column-homogeneous">True</property>
             <child>
               <object class="GtkImage" id="7image20">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">3</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image8">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">1</property>
+                <property name="left-attach">3</property>
+                <property name="top-attach">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image12">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">2</property>
+                <property name="left-attach">3</property>
+                <property name="top-attach">2</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image16">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">3</property>
+                <property name="left-attach">3</property>
+                <property name="top-attach">3</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image19">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">2</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image7">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">1</property>
+                <property name="left-attach">2</property>
+                <property name="top-attach">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image11">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">2</property>
+                <property name="left-attach">2</property>
+                <property name="top-attach">2</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image15">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">3</property>
+                <property name="left-attach">2</property>
+                <property name="top-attach">3</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image18">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image6">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">1</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image10">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">2</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">2</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image14">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">3</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">3</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image17">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image5">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">1</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image9">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">2</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">2</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image13">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">3</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">3</property>
               </packing>
             </child>
           </object>
@@ -1173,97 +1198,110 @@
           </packing>
         </child>
         <child>
+          <!-- n-columns=4 n-rows=3 -->
           <object class="GtkGrid">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_top">14</property>
-            <property name="margin_bottom">10</property>
-            <property name="row_spacing">5</property>
-            <property name="row_homogeneous">True</property>
-            <property name="column_homogeneous">True</property>
+            <property name="can-focus">False</property>
+            <property name="margin-top">14</property>
+            <property name="margin-bottom">10</property>
+            <property name="row-spacing">5</property>
+            <property name="row-homogeneous">True</property>
+            <property name="column-homogeneous">True</property>
             <child>
               <object class="GtkImage" id="7image1">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image3">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">1</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image2">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">2</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkImage" id="7image4">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">1</property>
+                <property name="left-attach">2</property>
+                <property name="top-attach">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="7input1">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="7input3">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">1</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="7input2">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
               </object>
               <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">3</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="7input4">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
               </object>
               <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">1</property>
+                <property name="left-attach">3</property>
+                <property name="top-attach">1</property>
               </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
             </child>
           </object>
           <packing>
@@ -1276,11 +1314,11 @@
           <object class="GtkButton">
             <property name="label" translatable="yes">Confirmar</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="margin_left">5</property>
-            <property name="margin_right">5</property>
-            <property name="margin_bottom">5</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="margin-left">5</property>
+            <property name="margin-right">5</property>
+            <property name="margin-bottom">5</property>
             <signal name="clicked" handler="onButtonClicked" swapped="no"/>
           </object>
           <packing>
@@ -1294,19 +1332,16 @@
   </object>
   <object class="GtkWindow" id="8">
     <property name="name">8</property>
-    <property name="can_focus">False</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <property name="can-focus">False</property>
     <child>
       <object class="GtkBox" id="GtkBox">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">Resolva as operações</property>
             <attributes>
               <attribute name="font-desc" value="Ubuntu Mono Bold 22"/>
@@ -1319,151 +1354,170 @@
           </packing>
         </child>
         <child>
+          <!-- n-columns=3 n-rows=6 -->
           <object class="GtkGrid">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="valign">end</property>
-            <property name="margin_top">14</property>
-            <property name="row_spacing">20</property>
-            <property name="column_spacing">125</property>
-            <property name="column_homogeneous">True</property>
+            <property name="margin-top">14</property>
+            <property name="row-spacing">20</property>
+            <property name="column-spacing">125</property>
+            <property name="column-homogeneous">True</property>
             <child>
               <object class="GtkLabel" id="8text2">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">label</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">1</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="8text3">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">label</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">2</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">2</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="8text4">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">label</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">3</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">3</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="8text5">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">label</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">4</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">4</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="8text6">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">label</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">5</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">5</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="8text1">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">label</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="8input1">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="margin_right">4</property>
-                <property name="input_purpose">number</property>
+                <property name="can-focus">True</property>
+                <property name="margin-right">4</property>
+                <property name="input-purpose">number</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="8input2">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="margin_right">4</property>
-                <property name="input_purpose">number</property>
+                <property name="can-focus">True</property>
+                <property name="margin-right">4</property>
+                <property name="input-purpose">number</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">1</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="8input3">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="margin_right">4</property>
-                <property name="input_purpose">number</property>
+                <property name="can-focus">True</property>
+                <property name="margin-right">4</property>
+                <property name="input-purpose">number</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">2</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">2</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="8input4">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="margin_right">4</property>
-                <property name="input_purpose">number</property>
+                <property name="can-focus">True</property>
+                <property name="margin-right">4</property>
+                <property name="input-purpose">number</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">3</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">3</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="8input5">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="margin_right">4</property>
-                <property name="input_purpose">number</property>
+                <property name="can-focus">True</property>
+                <property name="margin-right">4</property>
+                <property name="input-purpose">number</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">4</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">4</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="8input6">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="margin_right">4</property>
-                <property name="input_purpose">number</property>
+                <property name="can-focus">True</property>
+                <property name="margin-right">4</property>
+                <property name="input-purpose">number</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">5</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">5</property>
               </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
             </child>
           </object>
           <packing>
@@ -1476,12 +1530,12 @@
           <object class="GtkButton">
             <property name="label" translatable="yes">Confirmar</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="margin_left">5</property>
-            <property name="margin_right">5</property>
-            <property name="margin_top">7</property>
-            <property name="margin_bottom">4</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="margin-left">5</property>
+            <property name="margin-right">5</property>
+            <property name="margin-top">7</property>
+            <property name="margin-bottom">4</property>
             <signal name="clicked" handler="onButtonClicked" swapped="no"/>
           </object>
           <packing>
@@ -1494,20 +1548,17 @@
     </child>
   </object>
   <object class="GtkWindow" id="corretaWindow">
-    <property name="can_focus">False</property>
-    <property name="is_focus">True</property>
+    <property name="can-focus">False</property>
+    <property name="is-focus">True</property>
     <property name="type">popup</property>
-    <property name="window_position">center</property>
-    <property name="default_width">440</property>
-    <property name="default_height">250</property>
-    <property name="urgency_hint">True</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <property name="window-position">center</property>
+    <property name="default-width">440</property>
+    <property name="default-height">250</property>
+    <property name="urgency-hint">True</property>
     <child>
       <object class="GtkLabel">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">Você acertou!  +10 Pontos</property>
         <attributes>
           <attribute name="font-desc" value="Sans Bold 20"/>
@@ -1517,19 +1568,16 @@
     </child>
   </object>
   <object class="GtkWindow" id="erradaWindow">
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <property name="type">popup</property>
-    <property name="window_position">center</property>
-    <property name="default_width">440</property>
-    <property name="default_height">250</property>
-    <property name="urgency_hint">True</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <property name="window-position">center</property>
+    <property name="default-width">440</property>
+    <property name="default-height">250</property>
+    <property name="urgency-hint">True</property>
     <child>
       <object class="GtkLabel">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="label" translatable="yes">Você errou.  -5 Pontos</property>
         <attributes>
           <attribute name="font-desc" value="Sans Bold 20"/>
@@ -1538,21 +1586,20 @@
       </object>
     </child>
   </object>
-  <object class="GtkWindow" id="explicT4">
-    <property name="can_focus">False</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+  <object class="GtkWindow" id="explicar">
+    <property name="can-focus">False</property>
+    <property name="default-width">400</property>
+    <property name="default-height">200</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkLabel">
+          <object class="GtkLabel" id="explicacaoTexto">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Escreva o número correspondente à palavra</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">label</property>
             <property name="wrap">True</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 20"/>
@@ -1571,10 +1618,13 @@
           <object class="GtkButton">
             <property name="label" translatable="yes">Ok</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="margin_left">5</property>
-            <property name="margin_right">5</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="margin-left">5</property>
+            <property name="margin-right">5</property>
+            <property name="margin-start">10</property>
+            <property name="margin-end">10</property>
+            <property name="margin-bottom">10</property>
             <signal name="clicked" handler="okBtn" swapped="no"/>
           </object>
           <packing>
@@ -1587,23 +1637,20 @@
     </child>
   </object>
   <object class="GtkWindow" id="finalWindow">
-    <property name="can_focus">False</property>
+    <property name="can-focus">False</property>
     <property name="type">popup</property>
-    <property name="window_position">center</property>
-    <property name="default_width">450</property>
-    <property name="default_height">330</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <property name="window-position">center</property>
+    <property name="default-width">450</property>
+    <property name="default-height">330</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkLabel" id="finalText">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="label" translatable="yes">label</property>
             <attributes>
               <attribute name="font-desc" value="Sans Bold 20"/>
@@ -1620,10 +1667,13 @@
           <object class="GtkButton">
             <property name="label" translatable="yes">Ok</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="margin_left">5</property>
-            <property name="margin_right">5</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="margin-left">5</property>
+            <property name="margin-right">5</property>
+            <property name="margin-start">10</property>
+            <property name="margin-end">10</property>
+            <property name="margin-bottom">10</property>
             <signal name="clicked" handler="leave" swapped="no"/>
           </object>
           <packing>
@@ -1632,28 +1682,6 @@
             <property name="position">1</property>
           </packing>
         </child>
-      </object>
-    </child>
-  </object>
-  <object class="GtkWindow" id="respostaCorreta">
-    <property name="can_focus">False</property>
-    <property name="type">popup</property>
-    <property name="window_position">center</property>
-    <property name="default_width">440</property>
-    <property name="default_height">250</property>
-    <property name="urgency_hint">True</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
-    <child>
-      <object class="GtkLabel" id="resposta">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">label</property>
-        <attributes>
-          <attribute name="font-desc" value="Sans Bold 20"/>
-          <attribute name="foreground" value="#ffffffffffff"/>
-        </attributes>
       </object>
     </child>
   </object>

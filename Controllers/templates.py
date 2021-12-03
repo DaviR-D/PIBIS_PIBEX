@@ -10,7 +10,7 @@ class Template(Gtk.Window):
 		self.builder = Gtk.Builder()
 		self.builder.add_from_file('UI/templates.glade')
 		self.config = list()
-		self.index = list()
+		self.index = int()
 		self.name = str()
 
 	def Next(self, widget): # Chama o próximo template da lista
@@ -47,7 +47,11 @@ class TemplateQuestion(Template):
 		self.questionCount = 0
 		self.rightAnswer = 0
 		self.Score = 0
-		self.mostrarCorreta = False
+		self.helpWindow = self.builder.get_object('explicar')
+		self.helpText = self.builder.get_object('explicacaoTexto')
+		self.respostaWindow = self.builder.get_object('explicar')
+		self.respostaTexto = self.builder.get_object('explicacaoTexto')
+		self.mostrarCorreta = True
 
 	def Check(self, widget): # Checa se a resposta recebida corresponde à resposta configurada como correta
 		self.questionCount += 1
@@ -79,12 +83,13 @@ class TemplateQuestion(Template):
 		self.resultWindow.destroy()
 
 	def showRightAnswer(self):
-		self.resultWindow = self.builder.get_object('respostaCorreta')
-		self.respostaTexto = self.builder.get_object('resposta')
-		resposta = self.config[self.index - 1]['option' + str(self.respostaCorreta)]
-		self.respostaTexto.set_label('A resposta correta é: ' + resposta)
-		self.result(0.3)
+		self.respostaWindow.show()
 
+	def showHelp(self, widget):
+		self.helpWindow.show()
+
+	def okBtn(self, widget):
+		self.helpWindow.hide()
 
 
 class Template1(TemplateQuestion):
@@ -96,9 +101,12 @@ class Template1(TemplateQuestion):
 			self.options.append(self.builder.get_object('1option' + str(x)))
 			self.options[x - 1].id = x
 		self.image = self.builder.get_object('1image1')
+		self.helpText.set_label('')
 		self.builder.connect_signals(self)
 
 	def onButtonClicked(self, widget):
+		resposta = self.config[self.index - 1]['option' + str(self.respostaCorreta)]
+		self.respostaTexto.set_label('A resposta correta é:\n' + resposta)
 		self.resposta = str(widget.id)
 		self.Check(widget)
 
@@ -129,7 +137,6 @@ class Template4(TemplateQuestion):
 	def __init__(self):
 		TemplateQuestion.__init__(self)
 		self.window = self.builder.get_object('4')
-		self.janelaExplic = self.builder.get_object('explicT4')
 		self.images = list()
 		self.texts = list()
 		self.inputs = list()
@@ -145,8 +152,6 @@ class Template4(TemplateQuestion):
 		for input in self.inputs:
 			self.resposta.append(int(input.get_text()))
 		self.Check(widget)
-	def okBtn(self, widget):
-		self.janelaExplic.hide()
 
 class Template5(TemplateQuestion):
 	def __init__(self):
