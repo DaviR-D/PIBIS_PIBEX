@@ -52,7 +52,7 @@ def buildTemplate4(config, index):
         win.images[x - 1].set_from_pixbuf(pixbuf)
         win.texts[x - 1].set_label(config[index]['text' + str(y)])
     win.window.show()
-    win.janelaExplic.show()
+    
     return win
 
 def buildTemplate5(config, index):
