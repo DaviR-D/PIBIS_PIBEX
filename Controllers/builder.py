@@ -10,6 +10,8 @@ class Builder(Gtk.Window):
 	def __init__(self):
 		self.builder = Gtk.Builder()
 		self.builder.add_from_file('UI/builder.glade')
+		self.helpWindow = self.builder.get_object('helpWindow')
+		self.helpText = self.builder.get_object('helpText')
 		self.file = list() # Dicionários contendo a configuração que será salva
 		self.fileName = str() # Endereço em que a configuração será salva
 		self.index = 0 # Index da lista de templates a serem configurados
@@ -31,6 +33,12 @@ class Builder(Gtk.Window):
 			copy(file, 'Imagens')
 		return filePath
 
+	def showHelp(self, widget):
+		self.helpWindow.show()
+
+	def hideHelp(self, widget):
+		self.helpWindow.hide()
+
 
 class Builder1(Builder):
 	def __init__(self):
@@ -41,6 +49,7 @@ class Builder1(Builder):
 			self.options.append(self.builder.get_object('1input' + str(x)))
 		self.alternativaCorreta = self.builder.get_object('1inputCorreta')
 		self.seletorImagem = self.builder.get_object('1seletorImagem1')
+		self.helpText.set_label('Selecione a imagem, as quatro alternativas, e a alternativa correta')
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
@@ -99,6 +108,7 @@ class Builder4(Builder):
 			self.seletoresImagem.append(self.builder.get_object('4seletorImagem' + str(x)))
 			self.textInputs.append(self.builder.get_object('4input' + str(x)))
 
+		self.helpText.set_label('Selecione as quatro imagens, e as palavras que correspondem a elas')
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
@@ -120,6 +130,7 @@ class Builder5(Builder):
 		for x in range(1,6):
 			self.seletoresImagem.append(self.builder.get_object('5seletorImagem' + str(x)))
 
+		self.helpText.set_label('Selecione as cinco imagens, a palavra, e qual imagem corresponde a ela')
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
@@ -138,6 +149,7 @@ class Builder6(Builder):
 		self.seletorImagem = self.builder.get_object('6seletorImagem1')
 		self.button = self.builder.get_object('saveButton5')
 		self.respostaCorreta = self.builder.get_object('6inputCorreta')
+		self.helpText.set_label('Selecione a imagem, e a palavra que corresponde a ela')
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
