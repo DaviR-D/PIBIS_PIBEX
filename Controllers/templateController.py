@@ -8,6 +8,7 @@ import random
 def load(config, name='', index=2, questionCount=0, rightAnswer=0, score=0): # Carrega e configura o template recebido
 
     win = eval('buildTemplate' + str(config[index]['template']))(config, index)
+    win = loadOptionals(config, index, win)
     win.questionCount = questionCount
     win.rightAnswer = rightAnswer
     win.Score = score
@@ -16,6 +17,24 @@ def load(config, name='', index=2, questionCount=0, rightAnswer=0, score=0): # C
     win.name = name
     win.window.set_title(name + ' ' + str(index - 1))
     win.window.show()
+
+def loadOptionals(config, index, win):
+    try:
+        win.rightAnswerScore.set_label(config[index]['rightScore'])
+        win.wrongAnswerScore.set_label(config[index]['wrongScore'])
+    except Exception:
+        pass
+    try:
+        win.helpText.set_label(config[index]['helpText'])
+    except Exception:
+        pass
+    try:
+        win.mostrarCorreta = bool(config[index]['mostrarCorreta'])
+    except Exception:
+        pass
+
+    return win
+
 
 def buildTemplate1(config, index):
     win = templates.Template1()
@@ -52,7 +71,7 @@ def buildTemplate4(config, index):
         win.images[x - 1].set_from_pixbuf(pixbuf)
         win.texts[x - 1].set_label(config[index]['text' + str(y)])
     win.window.show()
-    
+
     return win
 
 def buildTemplate5(config, index):

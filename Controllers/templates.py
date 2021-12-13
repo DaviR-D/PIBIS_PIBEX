@@ -47,6 +47,8 @@ class TemplateQuestion(Template):
 		self.questionCount = 0
 		self.rightAnswer = 0
 		self.Score = 0
+		self.rightAnswerScore = self.builder.get_object('pontosCorreta')
+		self.wrongAnswerScore = self.builder.get_object('pontosErrada')
 		self.helpWindow = self.builder.get_object('explicar')
 		self.helpText = self.builder.get_object('explicacaoTexto')
 		self.respostaWindow = self.builder.get_object('explicar')
@@ -56,14 +58,16 @@ class TemplateQuestion(Template):
 	def Check(self, widget): # Checa se a resposta recebida corresponde à resposta configurada como correta
 		self.questionCount += 1
 
+
+
 		if(self.resposta == self.respostaCorreta):
 			respostaErrada = False
-			self.Score += 10
+			self.Score += int(self.rightAnswerScore.get_label()[1::])
 			self.rightAnswer += 1
 			self.resultWindow = self.builder.get_object('corretaWindow')
 
 		else:
-			self.Score -= 5
+			self.Score -= int(self.wrongAnswerScore.get_label()[1::])
 			self.resultWindow = self.builder.get_object('erradaWindow')
 			respostaErrada = True
 
