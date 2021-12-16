@@ -53,7 +53,7 @@ class TemplateQuestion(Template):
 		self.helpText = self.builder.get_object('explicacaoTexto')
 		self.respostaWindow = self.builder.get_object('explicar')
 		self.respostaTexto = self.builder.get_object('explicacaoTexto')
-		self.mostrarCorreta = True
+		self.mostrarCorreta = False
 
 	def Check(self, widget): # Checa se a resposta recebida corresponde à resposta configurada como correta
 		self.questionCount += 1
