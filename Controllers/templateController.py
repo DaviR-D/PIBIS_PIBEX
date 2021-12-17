@@ -8,7 +8,11 @@ import random
 def load(config, name='', index=2, questionCount=0, rightAnswer=0, score=0): # Carrega e configura o template recebido
 
     win = eval('buildTemplate' + str(config[index]['template']))(config, index)
-    win = loadOptionals(config, index, win)
+    try:
+        win = loadOptionals(config, index, win)
+    except Exception as e:
+        pass
+
     win.questionCount = questionCount
     win.rightAnswer = rightAnswer
     win.Score = score
@@ -18,20 +22,11 @@ def load(config, name='', index=2, questionCount=0, rightAnswer=0, score=0): # C
     win.window.set_title(name + ' ' + str(index - 1))
     win.window.show()
 
-def loadOptionals(config, index, win):
-    try:
-        win.rightAnswerScore.set_label(config[index]['rightScore'])
-        win.wrongAnswerScore.set_label(config[index]['wrongScore'])
-    except Exception:
-        pass
-    try:
-        win.helpText.set_label(config[index]['helpText'])
-    except Exception:
-        pass
-    try:
-        win.mostrarCorreta = bool(config[index]['mostrarCorreta'])
-    except Exception:
-        pass
+def loadOptionals(config, index, win):    
+    win.rightAnswerScore.set_label(config[index]['rightScore'])
+    win.wrongAnswerScore.set_label(config[index]['wrongScore'])
+    win.helpText.set_label(config[index]['helpText'])
+    win.mostrarCorreta = bool(config[index]['mostrarCorreta'])
 
     return win
 

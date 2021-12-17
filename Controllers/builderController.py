@@ -9,5 +9,6 @@ def Build(templates, fileName, file=[], index=0): # Carrega uma janela de criaç
     Builder.index = index + 1
     Builder.file = file
     Builder.fileName = fileName
+    Builder.file.append(dict())
     Builder.window.set_title(templates[index])
     Builder.window.show()

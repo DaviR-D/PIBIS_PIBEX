@@ -12,6 +12,11 @@ class Builder(Gtk.Window):
 		self.builder.add_from_file('UI/builder.glade')
 		self.helpWindow = self.builder.get_object('helpWindow')
 		self.helpText = self.builder.get_object('helpText')
+		self.optionalsWindow = self.builder.get_object('optionals')
+		self.helpConfig = self.builder.get_object('helpConfig')
+		self.rightScore = self.builder.get_object('rightScore')
+		self.wrongScore = self.builder.get_object('wrongScore')
+		self.mostrarCorreta = self.builder.get_object('mostrarCorreta')
 		self.file = list() # Dicionários contendo a configuração que será salva
 		self.fileName = str() # Endereço em que a configuração será salva
 		self.index = 0 # Index da lista de templates a serem configurados
@@ -33,6 +38,12 @@ class Builder(Gtk.Window):
 			copy(file, 'Imagens')
 		return filePath
 
+	def saveOptionals(self, widget):
+		self.file[-1]['helpText'] = self.helpConfig.get_text()
+		self.file[-1]['rightScore'] = self.rightScore.get_text()
+		self.file[-1]['wrongScore'] = self.wrongScore.get_text()
+		self.file[-1]['mostrarCorreta'] = self.mostrarCorreta.get_state()
+
 	def showHelp(self, widget):
 		self.helpWindow.show()
 
@@ -53,7 +64,6 @@ class Builder1(Builder):
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
-		self.file.append(dict())
 		self.file[-1]['imagem'] = self.addFile(self.seletorImagem.get_filename())
 		self.file[-1]['template'] = '1'
 		for x in range(1, 5):
@@ -71,7 +81,6 @@ class Builder2(Builder):
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
-		self.file.append(dict())
 		self.file[-1]['imagem'] = self.addFile(self.seletorImagem.get_filename())
 		self.file[-1]['text'] = self.text.get_text()
 		self.file[-1]['template'] = '2'
@@ -90,7 +99,6 @@ class Builder3(Builder):
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
-		self.file.append(dict())
 		for x in range(1, 9):
 			self.file[-1]['imagem' + str(x)] = self.addFile(self.seletoresImagem[x - 1].get_filename())
 			self.file[-1]['text' + str(x)] = self.textInputs[x - 1].get_text()
@@ -112,7 +120,6 @@ class Builder4(Builder):
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
-		self.file.append(dict())
 		for x in range(1, 5):
 			self.file[-1]['imagem' + str(x)] = self.addFile(self.seletoresImagem[x - 1].get_filename())
 			self.file[-1]['text' + str(x)] = self.textInputs[x - 1].get_text()
@@ -134,7 +141,6 @@ class Builder5(Builder):
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
-		self.file.append(dict())
 		for x in range(1, 6):
 			self.file[-1]['imagem' + str(x)] = self.addFile(self.seletoresImagem[x - 1].get_filename())
 		self.file[-1]['text'] = self.textInput.get_text()
@@ -153,7 +159,6 @@ class Builder6(Builder):
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
-		self.file.append(dict())
 		self.file[-1]['imagem'] = self.addFile(self.seletorImagem.get_filename())
 		self.file[-1]['correta'] = self.respostaCorreta.get_text()
 		self.file[-1]['template'] = '6'
@@ -171,7 +176,6 @@ class Builder7(Builder):
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
-		self.file.append(dict())
 		for x in range(1, 5):
 			self.file[-1]['imagem' + str(x)] = self.addFile(self.seletoresImagem[x - 1].get_filename())
 		self.file[-1]['template'] = '7'
@@ -186,7 +190,6 @@ class Builder8(Builder):
 		self.builder.connect_signals(self)
 
 	def salvar(self, widget):
-		self.file.append(dict())
 		self.file[-1]['limiteNum'] = self.input.get_text()
 		self.file[-1]['template'] = '8'
 		self.Next()
