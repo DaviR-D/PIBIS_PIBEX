@@ -43,12 +43,16 @@ class Builder(Gtk.Window):
 		self.file[-1]['rightScore'] = self.rightScore.get_text()
 		self.file[-1]['wrongScore'] = self.wrongScore.get_text()
 		self.file[-1]['mostrarCorreta'] = self.mostrarCorreta.get_state()
+		self.hideOptionals()
 
 	def showHelp(self, widget):
 		self.helpWindow.show()
 
 	def hideHelp(self, widget):
 		self.helpWindow.hide()
+
+	def showOptionals(self, widget):
+		self.optionalsWindow.show()
 
 
 class Builder1(Builder):
