@@ -198,6 +198,7 @@
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
+            <signal name="clicked" handler="showOptionals" swapped="no"/>
           </object>
           <packing>
             <property name="left-attach">0</property>
@@ -343,6 +344,7 @@
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
+            <signal name="clicked" handler="showOptionals" swapped="no"/>
           </object>
           <packing>
             <property name="left-attach">0</property>
@@ -411,6 +413,7 @@
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="showOptionals" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -506,6 +509,7 @@
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="showOptionals" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -605,11 +609,12 @@
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="showOptionals">
                 <property name="label" translatable="yes">Opcionais</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="showOptionals" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -877,7 +882,18 @@
           </packing>
         </child>
         <child>
-          <placeholder/>
+          <object class="GtkButton">
+            <property name="label" translatable="yes">Opcionais</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="always-show-image">True</property>
+            <signal name="clicked" handler="showOptionals" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">0</property>
+          </packing>
         </child>
         <child>
           <placeholder/>
@@ -1133,6 +1149,7 @@
             <property name="receives-default">True</property>
             <property name="margin-end">67</property>
             <property name="always-show-image">True</property>
+            <signal name="clicked" handler="showOptionals" swapped="no"/>
           </object>
           <packing>
             <property name="left-attach">0</property>
@@ -1256,6 +1273,7 @@
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="showOptionals" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -1363,6 +1381,7 @@
   <object class="GtkWindow" id="optionals">
     <property name="can-focus">False</property>
     <property name="window-position">center</property>
+    <property name="deletable">False</property>
     <child>
       <!-- n-columns=2 n-rows=7 -->
       <object class="GtkGrid">
