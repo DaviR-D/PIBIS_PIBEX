@@ -22,9 +22,9 @@ def load(config, name='', index=2, questionCount=0, rightAnswer=0, score=0): # C
     win.window.set_title(name + ' ' + str(index - 1))
     win.window.show()
 
-def loadOptionals(config, index, win):    
-    win.rightAnswerScore.set_label(config[index]['rightScore'])
-    win.wrongAnswerScore.set_label(config[index]['wrongScore'])
+def loadOptionals(config, index, win):
+    win.rightAnswerScore.set_label('+' + config[index]['rightScore'])
+    win.wrongAnswerScore.set_label('-' + config[index]['wrongScore'])
     win.helpText.set_label(config[index]['helpText'])
     win.mostrarCorreta = bool(config[index]['mostrarCorreta'])
 
