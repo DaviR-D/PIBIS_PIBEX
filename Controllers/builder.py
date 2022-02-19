@@ -39,11 +39,16 @@ class Builder(Gtk.Window):
 		return filePath
 
 	def saveOptionals(self, widget):
-		self.file[-1]['helpText'] = self.helpConfig.get_text()
-		self.file[-1]['rightScore'] = self.rightScore.get_text()
-		self.file[-1]['wrongScore'] = self.wrongScore.get_text()
+		helpConfig = self.helpConfig.get_text()
+		rightScore = self.rightScore.get_text()
+		wrongScore = self.wrongScore.get_text()
+		mostrarCorreta = self.mostrarCorreta.get_state()
+
+		self.file[-1]['helpText'] = helpConfig if helpConfig != '' else 0
+		self.file[-1]['rightScore'] = rightScore if rightScore != '' else 0
+		self.file[-1]['wrongScore'] = wrongScore if wrongScore != '' else 0
 		self.file[-1]['mostrarCorreta'] = self.mostrarCorreta.get_state()
-		self.hideOptionals()
+		self.optionalsWindow.hide()
 
 	def showHelp(self, widget):
 		self.helpWindow.show()
