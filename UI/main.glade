@@ -9,6 +9,7 @@
   </object>
   <object class="GtkWindow" id="mainWindow">
     <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Menu</property>
     <property name="window-position">center</property>
     <property name="default-width">440</property>
     <property name="default-height">250</property>
@@ -52,19 +53,6 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="delete">
-            <property name="label" translatable="yes">Deletar</property>
-            <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="receives-default">True</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">2</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkButton" id="random">
             <property name="label" translatable="yes">Aleatório</property>
             <property name="visible">True</property>
@@ -85,6 +73,7 @@
     <property name="width-request">500</property>
     <property name="height-request">500</property>
     <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Criar nova atividade</property>
     <property name="window-position">center</property>
     <child>
       <object class="GtkBox">
@@ -107,7 +96,7 @@
                 <property name="can-focus">False</property>
                 <property name="hscroll-policy">natural</property>
                 <child>
-                  <!-- n-columns=6 n-rows=3 -->
+                  <!-- n-columns=8 n-rows=3 -->
                   <object class="GtkGrid">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
@@ -228,6 +217,28 @@
                       </packing>
                     </child>
                     <child>
+                      <object class="GtkImage" id="img7">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="stock">gtk-missing-image</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">6</property>
+                        <property name="top-attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="img8">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="stock">gtk-missing-image</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">7</property>
+                        <property name="top-attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
                       <object class="GtkLabel">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
@@ -259,6 +270,34 @@
                         <property name="left-attach">5</property>
                         <property name="top-attach">1</property>
                       </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">7</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">6</property>
+                        <property name="top-attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">8</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">7</property>
+                        <property name="top-attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
                     </child>
                     <child>
                       <placeholder/>
@@ -377,6 +416,7 @@
     <property name="width-request">250</property>
     <property name="height-request">200</property>
     <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Carregar atividade aleatória</property>
     <property name="window-position">center</property>
     <child>
       <object class="GtkBox">

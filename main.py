@@ -4,6 +4,7 @@ import random
 from glob import glob
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GdkPixbuf, Gio
+from os.path import basename
 from Controllers import templateController, builderController
 
 class Main(Gtk.Window): # Carrega elementos UI
@@ -29,17 +30,7 @@ class Main(Gtk.Window): # Carrega elementos UI
 		self.nameChooser = self.builder.get_object('nameChooser')
 		self.categoria = self.builder.get_object('categoria')
 		self.dificuldade = self.builder.get_object('dificuldade')
-		self.img = []
-		for x in range(1, 5):
-			self.img.append(self.builder.get_object('img' + str(x)))
-			pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale('Imagens/t' + str(x) + '.png', width=250, height=400, preserve_aspect_ratio=False)
-			self.img[-1].set_from_pixbuf(pixbuf)
-		self.img.append(self.builder.get_object('img5'))
-		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale('Imagens/t5.png', width=400, height=250, preserve_aspect_ratio=False)
-		self.img[-1].set_from_pixbuf(pixbuf)
-		self.img.append(self.builder.get_object('img6'))
-		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale('Imagens/t6.png', width=250, height=400, preserve_aspect_ratio=False)
-		self.img[-1].set_from_pixbuf(pixbuf)
+		self.loadTemplateExamples()
 		self.builder.connect_signals(self)
 		self.newWindow.show()
 
@@ -65,7 +56,7 @@ class Main(Gtk.Window): # Carrega elementos UI
 	def loadConfig(self, config):
 		with open(config) as conf:
 			build = json.load(conf)
-		templateController.load(build)
+		templateController.load(build, basename(config)[:-7:])
 
 	def loadRandom(self, widget):
 		categoria = self.categoria.get_active_id()
@@ -79,7 +70,24 @@ class Main(Gtk.Window): # Carrega elementos UI
 					self.loadConfig(config)
 					break
 
-
+	def loadTemplateExamples(self):
+		self.img = []
+		for x in range(1, 5):
+			self.img.append(self.builder.get_object('img' + str(x)))
+			pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale('Imagens/t' + str(x) + '.png', width=250, height=400, preserve_aspect_ratio=False)
+			self.img[-1].set_from_pixbuf(pixbuf)
+		self.img.append(self.builder.get_object('img5'))
+		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale('Imagens/t5.png', width=400, height=250, preserve_aspect_ratio=False)
+		self.img[-1].set_from_pixbuf(pixbuf)
+		self.img.append(self.builder.get_object('img6'))
+		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale('Imagens/t6.png', width=250, height=400, preserve_aspect_ratio=False)
+		self.img[-1].set_from_pixbuf(pixbuf)
+		self.img.append(self.builder.get_object('img7'))
+		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale('Imagens/t7.png', width=400, height=250, preserve_aspect_ratio=False)
+		self.img[-1].set_from_pixbuf(pixbuf)
+		self.img.append(self.builder.get_object('img8'))
+		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale('Imagens/t8.png', width=250, height=400, preserve_aspect_ratio=True)
+		self.img[-1].set_from_pixbuf(pixbuf)
 
 
 win = Main()

@@ -10,12 +10,13 @@ class Template(Gtk.Window):
 		self.builder = Gtk.Builder()
 		self.builder.add_from_file('UI/templates.glade')
 		self.config = list()
-		self.index = list()
+		self.index = int()
+		self.name = str()
 
 	def Next(self, widget): # Chama o próximo template da lista
 		self.window.destroy()
 		if(len(self.config) > self.index):
-			templateController.load(self.config, self.index, self.questionCount, self.rightAnswer, self.Score)
+			templateController.load(self.config, self.name, self.index, self.questionCount, self.rightAnswer, self.Score)
 		elif(self.questionCount):
 			self.final()
 
@@ -46,30 +47,53 @@ class TemplateQuestion(Template):
 		self.questionCount = 0
 		self.rightAnswer = 0
 		self.Score = 0
+		self.rightAnswerScore = self.builder.get_object('pontosCorreta')
+		self.wrongAnswerScore = self.builder.get_object('pontosErrada')
+		self.helpWindow = self.builder.get_object('explicar')
+		self.helpText = self.builder.get_object('explicacaoTexto')
+		self.respostaWindow = self.builder.get_object('explicar')
+		self.respostaTexto = self.builder.get_object('explicacaoTexto')
+		self.mostrarCorreta = False
 
 	def Check(self, widget): # Checa se a resposta recebida corresponde à resposta configurada como correta
 		self.questionCount += 1
 
+
+
 		if(self.resposta == self.respostaCorreta):
-			self.Score += 10
+			respostaErrada = False
+			self.Score += int(self.rightAnswerScore.get_label()[1::])
 			self.rightAnswer += 1
 			self.resultWindow = self.builder.get_object('corretaWindow')
 
 		else:
-			self.Score -= 5
+			self.Score -= int(self.wrongAnswerScore.get_label()[1::])
 			self.resultWindow = self.builder.get_object('erradaWindow')
+			respostaErrada = True
 
 		self.window.hide()
-		self.result()
+		self.result(0.1)
 		self.Next(widget)
 
-	def result(self):
+		if(self.mostrarCorreta and respostaErrada):
+			self.showRightAnswer()
+
+	def result(self, tempo):
 		self.resultWindow.show()
 		for x in range(15):
 			while Gtk.events_pending():
 				Gtk.main_iteration()
-			sleep(0.1)
+			sleep(tempo)
 		self.resultWindow.destroy()
+
+	def showRightAnswer(self):
+		self.respostaWindow.show()
+
+	def showHelp(self, widget):
+		self.helpWindow.show()
+
+	def okBtn(self, widget):
+		self.helpWindow.hide()
 
 
 class Template1(TemplateQuestion):
@@ -81,9 +105,12 @@ class Template1(TemplateQuestion):
 			self.options.append(self.builder.get_object('1option' + str(x)))
 			self.options[x - 1].id = x
 		self.image = self.builder.get_object('1image1')
+		self.helpText.set_label('')
 		self.builder.connect_signals(self)
 
 	def onButtonClicked(self, widget):
+		resposta = self.config[self.index - 1]['option' + str(self.respostaCorreta)]
+		self.respostaTexto.set_label('A resposta correta é:\n' + resposta)
 		self.resposta = str(widget.id)
 		self.Check(widget)
 
@@ -130,7 +157,6 @@ class Template4(TemplateQuestion):
 			self.resposta.append(int(input.get_text()))
 		self.Check(widget)
 
-
 class Template5(TemplateQuestion):
 	def __init__(self):
 		TemplateQuestion.__init__(self)
@@ -160,4 +186,44 @@ class Template6(TemplateQuestion):
 
 	def onButtonClicked(self, widget):
 		self.resposta = self.input.get_text().lower()
+		self.Check(widget)
+
+class Template7(TemplateQuestion):
+	def __init__(self):
+		TemplateQuestion.__init__(self)
+		self.window = self.builder.get_object('7')
+		self.images = list()
+		self.inputs = list()
+		for x in range(1,21):
+			self.images.append(self.builder.get_object('7image' + str(x)))
+
+		for x in range(1,5):
+			self.inputs.append(self.builder.get_object('7input' + str(x)))
+
+		self.builder.connect_signals(self)
+
+	def onButtonClicked(self, widget):
+		self.resposta = list()
+		for input in self.inputs:
+			self.resposta.append(int(input.get_text()))
+		self.Check(widget)
+
+
+class Template8(TemplateQuestion):
+	def __init__(self):
+		TemplateQuestion.__init__(self)
+		self.window = self.builder.get_object('8')
+		self.texts = list()
+		self.inputs = list()
+
+		for x in range(1,7):
+			self.inputs.append(self.builder.get_object('8input' + str(x)))
+			self.texts.append(self.builder.get_object('8text' + str(x)))
+
+		self.builder.connect_signals(self)
+
+	def onButtonClicked(self, widget):
+		self.resposta = list()
+		for input in self.inputs:
+			self.resposta.append(int(input.get_text()))
 		self.Check(widget)
